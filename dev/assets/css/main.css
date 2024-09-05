@@ -1,0 +1,120 @@
+body {
+    font-family: var(--font-family);
+    color: var(--body-color);
+    background: var(--body-bg);
+    transition: background 0.25s ease-out;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+@media(min-width: 1280px) {
+    .container {
+        max-width: 1240px;
+    }
+}
+
+@media(min-width: 1500px) {
+    .container {
+        max-width: 1520px;
+    }
+}
+
+main {
+    padding-top: 160px;
+}
+
+.section {
+    padding: 50px 0;
+}
+
+.section__title {
+    font-size: 55px;
+    margin-bottom: 50px;
+    line-height: 1.11;
+    letter-spacing: -0.025em;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.logo svg {
+    width: 150px;
+    fill: var(--body-color);
+    stroke: var(--body-color);
+}
+
+@media(max-width: 992px) {
+    main {
+        padding-top: 80px;
+    }
+}
+
+@media(max-width: 767px) {
+    .section {
+        padding: 35px 0;
+    }
+
+    .section__title {
+        font-size: 35px;
+        margin-bottom: 35px;
+    }
+}
+
+.btn-up {
+    display: none;
+    position: fixed;
+    background: var(--body-color);
+    right: 20px;
+    bottom: 20px;
+    border-radius: 22px;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    z-index: 20;
+    transition: background-color 0.3s ease-out;
+}
+
+.btn-up::before {
+    content: "";
+    text-align: center;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 12px;
+    top: 12px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cg fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 17V4M3 10l7-7 7 7'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.bg-2 .btn-up {
+   display: block;
+}
+
+.btn-up_hide {
+    display: none;
+}
+
+@media(max-width: 768px) {
+    .btn-up {
+        width: 35px;
+        height: 35px;
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .btn-up::before {
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-repeat: no-repeat;
+        background-size: 15px 15px;
+        background-position: center;
+    }
+}
