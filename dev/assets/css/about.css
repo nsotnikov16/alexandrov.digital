@@ -17,7 +17,7 @@
 
 .about__item-img {
     margin-right: 25px;
-    background: var(--body-bg);
+    background: var(--bg);
     width: 200px;
     flex-shrink: 0;
 }

@@ -1,0 +1,25 @@
+.messengers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.messengers__item {
+    width: 40px;
+    height: 40px;
+    background-color: #e8e8e8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+}
+
+.messengers__item:last-child {
+    margin-right: 0;
+}
+
+.messengers__item svg {
+    width: 15px;
+    height: 15px;
+}

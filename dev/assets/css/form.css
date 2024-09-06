@@ -27,7 +27,7 @@
 .form__textarea {
     padding: 8px 15px;
     background-color: #e6eded;
-    color: var(--body-color);
+    color: var(--color);
     border: none;
     font-size: 20px;
 }

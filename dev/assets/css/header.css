@@ -5,10 +5,6 @@ header {
     left: 0;
     width: 100%;
     z-index: 999;
-    -webkit-transition: background var(--transition-duration) ease, -webkit-transform var(--transition-duration) ease;
-    transition: background var(--transition-duration) ease, -webkit-transform var(--transition-duration) ease;
-    transition: transform var(--transition-duration) ease, background var(--transition-duration) ease;
-    transition: transform var(--transition-duration) ease, background var(--transition-duration) ease, -webkit-transform var(--transition-duration) ease;
 }
 
 .header_hide {
@@ -28,7 +24,6 @@ header {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    gap: 50px;
     -webkit-transition: height var(--transition-duration) ease;
     transition: height var(--transition-duration) ease;
     will-change: height;
@@ -40,23 +35,33 @@ header {
     height: 80px;
 }
 
+.header__nav {
+    display: flex;
+    align-items: center;
+}
+
 .header__nav-link {
-    display: inline-block;
-    padding: calc(8px*var(--scale)) calc(5px*var(--scale));
-    position: relative;
-    text-decoration: none !important;
-    letter-spacing: -0.5px;
-    margin-right: calc(30px*var(--scale));
-    font-weight: 500;
-    font-size: 24px;
+    margin-right: 50px;
+    font-family: 'Cygre';
+    font-weight: 400;
+    font-size: 16px;
 }
 
-a.header__nav-link::before {
-    content: initial;
+.header__nav-link:last-child {
+    margin-right: 0;
 }
 
-.header__nav-project {
-    font-size: 20px;
+.header__contacts {
+    display: flex;
+    align-items: center;
+}
+
+.header__messengers {
+    margin-left: 43px;
+}
+
+.header__mob {
+    display: none;
 }
 
 .header__mob-btn {
@@ -64,6 +69,16 @@ a.header__nav-link::before {
     background: transparent;
     border: none;
     padding: 1px 6px;
+}
+
+.header__mob-phone {
+    display: none;
+    margin-right: 22px;
+}
+
+.header__mob-container {
+    display: flex;
+    align-items: center;
 }
 
 .header__mob-btn span {
@@ -88,7 +103,7 @@ a.header__nav-link::before {
     content: "";
     width: 100%;
     height: 3px;
-    background-color: var(--body-color);
+    background-color: var(--color);
     position: absolute;
     left: 0;
     transition: all .3s ease-out;
@@ -109,14 +124,13 @@ a.header__nav-link::before {
 }
 
 
-@media(max-width: 992px) {
+@media(max-width: 1150px) {
 
-    .header__nav-link_contacts {
-        display: inline-block;
-    }
 
     .header__wrapper {
         height: 80px;
+        /* display: grid;
+        grid-template-columns: max-content 27px 1fr; */
     }
 
     .header__menu-wrapper {
@@ -129,19 +143,27 @@ a.header__nav-link::before {
         padding: 200px 0;
         display: block;
         overflow-y: auto;
-        background: var(--body-color);
-        color: var(--body-bg);
+        background: var(--color);
+        color: var(--bg);
         transform: translateX(0);
         transition-property: transform, background;
         transition: 0.4s ease;
+    }
+
+    .header__contacts {
+        display: none;
+    }
+
+    .header__mob-phone {
+        display: initial;
     }
 
     .header__menu-wrapper:not(.header_menu .header__menu-wrapper) {
         visibility: hidden;
         transform: translateX(100%);
         pointer-events: none;
-        background: var(--body-color);
-        color: var(--body-bg);
+        background: var(--color);
+        color: var(--bg);
 
     }
 
@@ -151,7 +173,7 @@ a.header__nav-link::before {
 
     .header_menu .header__mob-btn span::before,
     .header_menu .header__mob-btn span::after {
-        background-color: var(--body-bg);
+        background-color: var(--bg);
     }
 
     .header_menu .header__mob-btn span::before {
@@ -181,13 +203,13 @@ a.header__nav-link::before {
     }
 
     .header__nav-project {
-        background: var(--body-bg);
-        color: var(--body-color)
+        background: var(--bg);
+        color: var(--color)
     }
 
     .header_menu .header__logo svg {
-        fill: var(--body-bg);
-        stroke: var(--body-bg);
+        fill: var(--bg);
+        stroke: var(--bg);
     }
 
     .header_menu .header__logo,

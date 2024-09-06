@@ -1,7 +1,7 @@
 body {
     font-family: var(--font-family);
-    color: var(--body-color);
-    background: var(--body-bg);
+    color: var(--color);
+    background: var(--bg);
     transition: background 0.25s ease-out;
     overflow-x: hidden;
 }
@@ -12,15 +12,9 @@ body {
     margin: 0 auto;
 }
 
-@media(min-width: 1280px) {
+@media(min-width: 1440px) {
     .container {
-        max-width: 1240px;
-    }
-}
-
-@media(min-width: 1500px) {
-    .container {
-        max-width: 1520px;
+        max-width: 1400px;
     }
 }
 
@@ -40,14 +34,15 @@ main {
 }
 
 .logo {
-    font-size: 30px;
-    font-weight: 600;
+    font-family: 'Coolvetica';
+    font-size: 24px;
+    font-weight: 500;
 }
 
 .logo svg {
     width: 150px;
-    fill: var(--body-color);
-    stroke: var(--body-color);
+    fill: var(--color);
+    stroke: var(--color);
 }
 
 @media(max-width: 992px) {
@@ -70,7 +65,7 @@ main {
 .btn-up {
     display: none;
     position: fixed;
-    background: var(--body-color);
+    background: var(--color);
     right: 20px;
     bottom: 20px;
     border-radius: 22px;
@@ -93,7 +88,7 @@ main {
 }
 
 .bg-2 .btn-up {
-   display: block;
+    display: block;
 }
 
 .btn-up_hide {
@@ -118,3 +113,10 @@ main {
         background-position: center;
     }
 }
+
+.phone {
+    font-family: 'Cygre';
+    font-weight: 700;
+    font-size: 16px;
+}
+

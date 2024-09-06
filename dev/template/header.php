@@ -12,15 +12,21 @@
                 </nav>
             </div>
             <div class="header__contacts">
-                <a href="<?= getHrefForPhone(PHONE) ?>"><?= PHONE ?></a>
-                <? view('messengers') ?>
+                <a class="phone" href="<?= getHrefForPhone(PHONE) ?>"><?= PHONE ?></a>
+                <? view('messengers', ['addClass' => 'header__messengers']) ?>
             </div>
-            <a href="<?= getHrefForPhone(PHONE) ?>" class="icon-phone header__mob-phone">
-                <span data-img-svg data-src="<?= ASSETS_PATH ?>/images/logo.svg"></span>
-            </a>
-            <button class="header__mob-btn">
-                <span></span>
-            </button>
+
+            <div class="header__mob-container">
+                <a href="<?= getHrefForPhone(PHONE) ?>" class="icon-phone header__mob-phone">
+                    <svg>
+                        <use href="<?= ASSETS_PATH ?>images/icons/sprite.svg#phone"></use>
+                    </svg>
+                </a>
+                <button class="header__mob-btn">
+                    <span></span>
+                </button>
+            </div>
+
 
             <div class="header__mob">
                 <nav class="header__nav">

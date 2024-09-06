@@ -395,7 +395,7 @@ li {
 
 a {
   text-decoration: none;
-  color: var(--body-color);
+  color: var(--color);
 }
 
 * {

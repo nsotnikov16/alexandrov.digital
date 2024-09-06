@@ -1,31 +1,31 @@
-<ul class="messengers <?= $addClass ?? '' ?>">
+<div class="messengers <?= $vars['addClass'] ?? '' ?>">
     <? if (defined('WHATSAPP') && WHATSAPP): ?>
-        <li class="messengers__item messengers__item_whatsapp">
-            <a href="<?= WHATSAPP ?>" class="messengers__link">
-                <svg>
-                    <use href=""></use>
-                </svg>
-            </a>
-        </li>
+
+        <a href="<?= WHATSAPP ?>" class="messengers__item messengers__item_whatsapp">
+            <svg>
+                <use href="<?= ASSETS_PATH ?>images/icons/sprite.svg#whatsapp"></use>
+            </svg>
+        </a>
+
     <? endif; ?>
 
     <? if (defined('TELEGRAM') && TELEGRAM): ?>
-        <li class="messengers__item messengers__item_telegram">
-            <a href="<?= TELEGRAM ?>" class="messengers__link">
-                <svg>
-                    <use href=""></use>
-                </svg>
-            </a>
-        </li>
+
+        <a href="<?= TELEGRAM ?>" class="messengers__item messengers__item_telegram">
+            <svg>
+                <use href="<?= ASSETS_PATH ?>images/icons/sprite.svg#telegram"></use>
+            </svg>
+        </a>
+
     <? endif; ?>
 
     <? if (defined('VIBER') && VIBER): ?>
-        <li class="messengers__item messengers__item_viber">
-            <a href="<?= VIBER ?>" class="messengers__link">
-                <svg>
-                    <use href=""></use>
-                </svg>
-            </a>
-        </li>
+
+        <a href="<?= VIBER ?>" class="messengers__item messengers__item_viber">
+            <svg>
+                <use href="<?= ASSETS_PATH ?>images/icons/sprite.svg#viber"></use>
+            </svg>
+        </a>
+
     <? endif; ?>
-</ul>
+</div>

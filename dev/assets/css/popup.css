@@ -40,11 +40,11 @@
 .popup__close svg {
     width: 27px;
     height: 27px;
-    fill: var(--body-color);
+    fill: var(--color);
 }
 
 .popup__close:hover svg {
-    fill: var(--body-bg);
+    fill: var(--bg);
 }
 
 @media (max-width: 560px) {
@@ -55,7 +55,7 @@
 }
 
 .popup_result .popup__content {
-    background: var(--body-bg);
+    background: var(--bg);
     padding: 20px 40px;
     border-radius: 5px;
 }
