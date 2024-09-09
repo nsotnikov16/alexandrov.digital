@@ -74,39 +74,38 @@ header {
 .header__mob-phone {
     display: none;
     margin-right: 22px;
+    width: 27px;
+    height: 27px;
+}
+
+.header__mob-phone svg {
+    fill: var(--color);
 }
 
 .header__mob-container {
-    display: flex;
+    display: none;
     align-items: center;
 }
 
+.header__mob-btn {
+    background-color: var(--color2);
+    width: 27px;
+    height: 27px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 3px;
+    padding: 6px 2px;
+}
+
 .header__mob-btn span {
+    background-color: white;
+    height: 2px;
+    width: 20px;
     display: block;
-    position: relative;
-    width: 24px;
-    height: 24px;
-}
-
-
-.header__mob-btn span:before {
-    top: 4px;
-}
-
-.header__mob-btn span::after {
-    top: 18px;
-}
-
-.header__mob-btn span::before,
-.header__mob-btn span::after {
-    display: block;
-    content: "";
-    width: 100%;
-    height: 3px;
-    background-color: var(--color);
-    position: absolute;
-    left: 0;
-    transition: all .3s ease-out;
+    border-radius: 50px;
+    transform: rotate(0);
+    transition: transform 0.2s linear;
 }
 
 .header__logo svg {
@@ -125,95 +124,125 @@ header {
 
 
 @media(max-width: 1150px) {
-
-
     .header__wrapper {
         height: 80px;
-        /* display: grid;
-        grid-template-columns: max-content 27px 1fr; */
     }
 
     .header__menu-wrapper {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 900;
-        padding: 200px 0;
-        display: block;
-        overflow-y: auto;
-        background: var(--color);
-        color: var(--bg);
-        transform: translateX(0);
-        transition-property: transform, background;
-        transition: 0.4s ease;
+        display: none;
+    }
+
+    .header__contacts:not(.header__mob .header__contacts) {
+        display: none;
     }
 
     .header__contacts {
-        display: none;
+        flex-direction: column;
+        align-items: initial;
+    }
+
+    .header__mob-container {
+        display: flex;
     }
 
     .header__mob-phone {
         display: initial;
     }
 
-    .header__menu-wrapper:not(.header_menu .header__menu-wrapper) {
-        visibility: hidden;
-        transform: translateX(100%);
-        pointer-events: none;
-        background: var(--color);
-        color: var(--bg);
-
-    }
-
     .header__mob-btn {
-        display: block;
+        display: flex;
     }
 
-    .header_menu .header__mob-btn span::before,
-    .header_menu .header__mob-btn span::after {
-        background-color: var(--bg);
-    }
-
-    .header_menu .header__mob-btn span::before {
-        transform: rotate(225deg);
-        top: 11px;
-    }
-
-    .header_menu .header__mob-btn span::after {
-        transform: rotate(-225deg);
-        top: 11px;
-    }
-
-    .header__logo svg {
-        width: 120px !important;
-        transform: translateY(0);
-    }
 
     .header__nav {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: initial;
     }
 
     .header__nav-link {
         margin-right: 0;
         margin-bottom: 20px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 40px;
     }
 
-    .header__nav-project {
-        background: var(--bg);
-        color: var(--color)
-    }
-
-    .header_menu .header__logo svg {
-        fill: var(--bg);
-        stroke: var(--bg);
+    .header__nav-link:last-child {
+        margin-bottom: 0;
     }
 
     .header_menu .header__logo,
     .header__mob-btn {
         z-index: 1000;
+    }
+
+    .header__mob {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        padding: 100px 20px 40px;
+        display: block;
+        overflow-y: auto;
+        transition-property: transform, background;
+        transition: 0.4s ease;
+        visibility: hidden;
+        transform: translateX(100%);
+        pointer-events: none;
+    }
+
+    .header_menu .header__mob {
+        visibility: visible;
+        transform: translateX(0);
+        pointer-events: initial;
+    }
+
+    .header__mob .header__messengers {
+        margin-left: 0;
+        justify-content: initial;
+        margin-top: 15px;
+    }
+
+    .header__mob .messengers__item {
+        background-color: var(--color2);
+        width: 50px;
+        height: 50px;
+    }
+
+    .header__mob .messengers__item svg {
+        fill: white;
+    }
+
+    .header__mob .header__contacts {
+        margin: 50px 0;
+    }
+
+    .header__mob .header__contacts .phone {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .header__mob-copyright {
+        margin-top: 20px;
+    }
+
+
+    .header_menu .header__mob-btn span:nth-child(2) {
+        display: none;
+    }
+
+    .header_menu .header__mob-btn span:nth-child(1) {
+        transform: rotate(45deg) translateX(4px) translateY(4px);
+    }
+
+    .header_menu .header__mob-btn span:nth-child(3) {
+        transform: rotate(-45deg) translateX(5px) translateY(-5px)
+    }
+
+    .header_menu .header__mob-container {
+        z-index: 101;
     }
 }

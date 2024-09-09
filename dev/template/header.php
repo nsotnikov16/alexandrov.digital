@@ -24,6 +24,8 @@
                 </a>
                 <button class="header__mob-btn">
                     <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
             </div>
 
@@ -33,15 +35,17 @@
                     <a href="<?= getCityURL() ?>/seo/" class="header__nav-link <?= checkUrl('/seo') ? 'link link_active' : '' ?>">SEO продвижение</a>
                     <a href="<?= getCityURL() ?>/advertising/" class="header__nav-link <?= checkUrl('/advertising') ? 'link link_active' : '' ?>">Контекстная реклама </a>
                     <a href="<?= getCityURL() ?>/devevelopment/" class="header__nav-link <?= checkUrl('/devevelopment') ? 'link link_active' : '' ?>">Разработка сайтов</a>
+                    <a href="<?= getCityURL() ?>/devevelopment/" class="header__nav-link <?= checkUrl('/devevelopment') ? 'link link_active' : '' ?>">Отзывы</a>
+                    <a href="<?= getCityURL() ?>/devevelopment/" class="header__nav-link <?= checkUrl('/devevelopment') ? 'link link_active' : '' ?>">Контакты</a>
                 </nav>
                 <div class="header__contacts">
-                    <a href="<?= getHrefForPhone(PHONE) ?>"><?= PHONE ?></a>
+                    <a class="phone" href="<?= getHrefForPhone(PHONE) ?>"><?= PHONE ?></a>
                     <p>Пишите в мессенджеры</p>
-                    <? view('messengers') ?>
+                    <? view('messengers', ['addClass' => 'header__messengers']) ?>
                 </div>
 
                 <div class="header__mob-bottom">
-                    <p>Alexandrov.<span class="color">Digital</span></p>
+                    <p class="logo header__logo">Alexandrov.<span class="color">Digital</span></p>
                     <p class="copyright header__mob-copyright">© Alexandrov.Digital, 2024</p>
                 </div>
             </div>
