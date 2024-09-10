@@ -1,6 +1,6 @@
 <? require_once __DIR__ . '/head.php' ?>
 
-<header class="header">
+<header class="header bg-2">
     <div class="container">
         <div class="header__wrapper">
             <a href="/" class="logo header__logo">Alexandrov.<span class="color">Digital</span></a>
@@ -8,7 +8,7 @@
                 <nav class="header__nav">
                     <a href="/seo/" class="header__nav-link <?= checkUrl('/seo') ? 'link link_active' : '' ?>">SEO продвижение</a>
                     <a href="/advertising/" class="header__nav-link <?= checkUrl('/advertising') ? 'link link_active' : '' ?>">Контекстная реклама </a>
-                    <a href="/devevelopment/" class="header__nav-link <?= checkUrl('/devevelopment') ? 'link link_active' : '' ?>">Разработка сайтов</a>
+                    <a href="/development/" class="header__nav-link <?= checkUrl('/devevelopment') ? 'link link_active' : '' ?>">Разработка сайтов</a>
                 </nav>
             </div>
             <div class="header__contacts">
@@ -32,7 +32,7 @@
                 <nav class="header__nav">
                     <a href="/seo/" class="header__nav-link <?= checkUrl('/seo') ? 'link link_active' : '' ?>">SEO продвижение</a>
                     <a href="/advertising/" class="header__nav-link <?= checkUrl('/advertising') ? 'link link_active' : '' ?>">Контекстная реклама </a>
-                    <a href="/devevelopment/" class="header__nav-link <?= checkUrl('/devevelopment') ? 'link link_active' : '' ?>">Разработка сайтов</a>
+                    <a href="/development/" class="header__nav-link <?= checkUrl('/devevelopment') ? 'link link_active' : '' ?>">Разработка сайтов</a>
                     <a href="/devevelopment/" class="header__nav-link <?= checkUrl('/devevelopment') ? 'link link_active' : '' ?>">Отзывы</a>
                     <a href="/devevelopment/" class="header__nav-link <?= checkUrl('/devevelopment') ? 'link link_active' : '' ?>">Контакты</a>
                 </nav>

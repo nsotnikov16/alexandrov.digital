@@ -1,5 +1,6 @@
 html {
     --bg: #ffffff;
+    --bg2: #F5F5F5;
     --color: #131313;
     --color2: #F25A2C;
     --color3: #7E8792;
@@ -10,4 +11,5 @@ html {
 
 html.bg-2 {
     --bg: #F5F5F5;
+    --bg2: #ffffff;
 }

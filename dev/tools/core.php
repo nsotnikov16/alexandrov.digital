@@ -15,5 +15,8 @@ function getFooter()
 
 function view(string $view, array $vars = [])
 {
+    foreach ($vars as $key => $value)
+        $$key = $value;
+
     include $_SERVER['DOCUMENT_ROOT'] . VIEWS_PATH . $view . '.php';
 }
