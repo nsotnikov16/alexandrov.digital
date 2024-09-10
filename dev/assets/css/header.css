@@ -192,6 +192,7 @@ header {
         visibility: hidden;
         transform: translateX(100%);
         pointer-events: none;
+        background: white;
     }
 
     .header_menu .header__mob {

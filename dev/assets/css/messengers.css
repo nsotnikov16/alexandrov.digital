@@ -22,4 +22,5 @@
 .messengers__item svg {
     width: 15px;
     height: 15px;
+    flex-shrink: 0;
 }

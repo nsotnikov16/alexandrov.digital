@@ -2,9 +2,7 @@
     <? if (defined('WHATSAPP') && WHATSAPP): ?>
 
         <a href="<?= WHATSAPP ?>" class="messengers__item messengers__item_whatsapp">
-            <svg>
-                <use href="<?= ASSETS_PATH ?>images/icons/sprite.svg#whatsapp"></use>
-            </svg>
+            <span data-img-svg data-src="<?= ASSETS_PATH ?>images/icons/messengers/whatsapp.svg">
         </a>
 
     <? endif; ?>
@@ -12,9 +10,7 @@
     <? if (defined('TELEGRAM') && TELEGRAM): ?>
 
         <a href="<?= TELEGRAM ?>" class="messengers__item messengers__item_telegram">
-            <svg>
-                <use href="<?= ASSETS_PATH ?>images/icons/sprite.svg#telegram"></use>
-            </svg>
+            <span data-img-svg data-src="<?= ASSETS_PATH ?>images/icons/messengers/telegram.svg">
         </a>
 
     <? endif; ?>
@@ -22,9 +18,7 @@
     <? if (defined('VIBER') && VIBER): ?>
 
         <a href="<?= VIBER ?>" class="messengers__item messengers__item_viber">
-            <svg>
-                <use href="<?= ASSETS_PATH ?>images/icons/sprite.svg#viber"></use>
-            </svg>
+            <span data-img-svg data-src="<?= ASSETS_PATH ?>images/icons/messengers/viber.svg">
         </a>
 
     <? endif; ?>
