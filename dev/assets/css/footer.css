@@ -92,7 +92,6 @@
         padding: 0 0 25px;
     }
 
-
     .footer__wrapper {
         grid-template-columns: 1fr;
         gap: 60px;
@@ -109,5 +108,13 @@
         grid-row: 1/2;
         grid-template-columns: 1fr;
         margin: 0;
+    }
+
+    .footer__phone {
+        margin-bottom: 20px;
+    }
+
+    .footer__copyright {
+        margin-top: -35px;
     }
 }
