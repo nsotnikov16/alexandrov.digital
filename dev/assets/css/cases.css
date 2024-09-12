@@ -1,0 +1,86 @@
+.cases {
+    display: grid;
+    grid-template-columns: repeat(3, 440px);
+    gap: 40px;
+}
+
+.case {
+    border-radius: 20px;
+    padding: 40px;
+    height: 440px;
+    overflow: hidden;
+}
+
+.case__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    height: 100%;
+}
+
+.case__name {
+    font-family: var(--font-family2);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: white;
+}
+
+.case__description {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 20px;
+    color: white;
+}
+
+.case__img {
+    /* display: none; */
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.case_1 {
+    background: #EB4961;
+    grid-column: span 2;
+    width: 680px;
+}
+
+.case_1 .case__name {
+    max-width: 70%;
+}
+
+.case_1 .case__description {
+    max-width: 85%;
+}
+
+.case_1 .case__img {
+    width: 288px;
+    top: 45px;
+    right: -85px;
+}
+
+.case_2 {
+    background: #405DFF;
+    width: 680px;
+    transform: translateX(-240px);
+}
+
+.case_3 {
+    background: #5DBB61;
+}
+
+.case_4 {
+    background: #2DB7F6;
+}
+
+.case_5 {
+    background: #8959D2;
+}
+
+.case_6 {
+    background: #F25A2C;
+    grid-column: span 2;
+}

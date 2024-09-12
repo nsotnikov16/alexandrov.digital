@@ -50,14 +50,15 @@ $services = [
     ],
 ]
 ?>
-
-<section class="section bg-2">
-    <div class="container">
-        <h2 class="section__title">Наши услуги</h2>
-        <div class="services">
-            <? foreach ($services as $service) {
-                view('service', $service);
-            } ?>
+<? if (!empty($services)): ?>
+    <section class="section bg-2">
+        <div class="container">
+            <h2 class="section__title">Наши услуги</h2>
+            <ul class="services">
+                <? foreach ($services as $service) {
+                    view('service', $service);
+                } ?>
+            </ul>
         </div>
-    </div>
-</section>
+    </section>
+<? endif; ?>
