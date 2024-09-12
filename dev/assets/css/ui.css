@@ -49,15 +49,19 @@ hr {
 
 .btn {
     display: inline-block;
-    padding: 15px 30px;
+    padding: 16px 30px;
     text-align: center;
-    border-radius: 50px;
+    border-radius: 12px;
     background: var(--color);
-    color: var(--bg);
+    color: white;
     font-weight: 700;
     transform: scale(1);
     transition: all var(--transition-duration) ease-in-out;
     cursor: pointer;
+}
+
+.btn_color {
+    background: var(--color2);
 }
 
 .btn:hover {
@@ -87,14 +91,41 @@ body::-webkit-scrollbar-thumb {
     transform: scale(1.05);
 }
 
-
 .bg-2 {
     background-color: var(--bg2);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+.icon-phone svg {
+    fill: var(--color);
+    width: 27px;
+    height: 27px;
+}
+
+.big {
+    font-size: 50px;
+}
+
+.currency {
+    font-size: 30px;
+}
+
+
+
 @media (max-width: 767px) {
     hr {
         padding: 0;
+    }
+
+    .big {
+        font-size: 40px;
+    }
+    
+    .currency {
+        font-size: 20px;
     }
 }
 
@@ -110,12 +141,3 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-.icon-phone svg {
-    fill: var(--color);
-    width: 27px;
-    height: 27px;
-}
