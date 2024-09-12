@@ -1,6 +1,6 @@
 .hero {
     position: relative;
-    font-family: 'Cygre';
+    font-family: var(--font-family2);
     overflow: hidden;
 }
 

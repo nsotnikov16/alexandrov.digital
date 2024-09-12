@@ -87,10 +87,6 @@ body::-webkit-scrollbar-thumb {
     transform: scale(1.05);
 }
 
-u {
-    text-decoration: initial;
-    border-bottom: 2px solid var(--color);
-}
 
 .bg-2 {
     background-color: var(--bg2);

@@ -70,10 +70,10 @@ function handlerScroll() {
     const contentHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrollProgress = (window.scrollY / contentHeight) * 100;
 
-    if (typeof window.noChangeBackround === 'undefined') {
-        html.classList.remove('bg-2');
-        if (scrollProgress >= 15) html.classList.add('bg-2');
-    }
+    // if (typeof window.noChangeBackround === 'undefined') {
+    //     html.classList.remove('bg-2');
+    //     if (scrollProgress >= 15) html.classList.add('bg-2');
+    // }
 
 
     if (header) {
