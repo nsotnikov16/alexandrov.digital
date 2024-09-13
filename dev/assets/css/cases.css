@@ -1,6 +1,6 @@
 .cases {
     display: grid;
-    grid-template-columns: repeat(3, 440px);
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 }
 
@@ -9,13 +9,14 @@
     padding: 40px;
     height: 440px;
     overflow: hidden;
+    position: relative;
 }
 
 .case__wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: relative;
+
     height: 100%;
 }
 
@@ -38,14 +39,13 @@
 .case__img {
     /* display: none; */
     position: absolute;
-    right: 0;
-    top: 0;
+
 }
 
 .case_1 {
     background: #EB4961;
     grid-column: span 2;
-    width: 680px;
+    width: 75%;
 }
 
 .case_1 .case__name {
@@ -58,29 +58,164 @@
 
 .case_1 .case__img {
     width: 288px;
-    top: 45px;
-    right: -85px;
+    top: 80px;
+    right: -35px;
 }
 
 .case_2 {
     background: #405DFF;
-    width: 680px;
-    transform: translateX(-240px);
+    width: calc(150% + 20px);
+    transform: translateX(-35%);
+}
+
+.case_2 .case__img {
+    width: 265px;
+    bottom: 0;
+    top: initial;
+    right: -40px;
+}
+
+.case_2 .case__description {
+    max-width: 60%;
 }
 
 .case_3 {
     background: #5DBB61;
 }
 
+.case_3 .case__img {
+    bottom: -100px;
+    right: -195px;
+    width: 397px;
+}
+
 .case_4 {
     background: #2DB7F6;
+}
+
+.case_4 .case__img {
+    top: -45px;
+    right: -175px;
 }
 
 .case_5 {
     background: #8959D2;
 }
 
+.case_5 .case__img {
+    width: 335px;
+    top: 46px;
+    right: -130px;
+}
+
+.case_5 .case__description {
+    max-width: 89%;
+}
+
 .case_6 {
     background: #F25A2C;
     grid-column: span 2;
+}
+
+.case_6 .case__description {
+    max-width: 60%;
+}
+
+.case_6 .case__img {
+    top: 49px;
+    right: 57px;
+}
+
+.case_consultation .case__name,
+.case_consultation .case__description {
+    color: var(--color);
+}
+
+.case_consultation .btn {
+    height: 80px;
+    width: 100%;
+    margin-top: 80px;
+}
+
+@media(max-width: 1350px) {
+    .cases {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .case_1,
+    .case_2 {
+        grid-column: initial;
+        width: initial;
+    }
+
+    .case_2 {
+        transform: initial;
+    }
+
+    .case_6 {
+        grid-column: initial;
+    }
+
+    .case_6 .case__img {
+        top: 100px;
+        right: 10px;
+        width: 150px;
+    }
+}
+
+@media(max-width: 1025px) {
+    .case__name {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .case__description {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .case .case__img {
+        position: static;
+        max-height: 200px;
+        max-width: 190px;
+        width: initial;
+        object-fit: contain;
+        margin: 0 auto;
+    }
+
+    .case {
+        height: initial;
+    }
+
+    .case .case__name,
+    .case .case__description {
+        max-width: initial;
+    }
+}
+
+@media(max-width: 820px) {
+    .cases {
+        gap: 20px;
+    }
+
+    .case {
+        padding: 20px;
+    }
+}
+
+@media(max-width: 650px) {
+    .cases {
+        grid-template-columns: 1fr;
+    }
+
+    .case_3 .case__img {
+        transform: translateY(20px) scale(1.2);
+    }
+
+    .case_4 .case__img,
+    .case_5 .case__img {
+        transform: scale(1.4);
+        margin-right: -90px;
+    }
+
 }

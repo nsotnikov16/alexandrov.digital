@@ -26,7 +26,7 @@ $cases = [
     ],
     [
         'name' => 'Строительство каркасных домов',
-        'description' => 'Рост трафика 
+        'description' => 'Рост трафика <br>
             с 0 до 300 человек',
         'img' => [
             'src' => ASSETS_PATH . 'images/cases/3.webp',
@@ -80,13 +80,23 @@ $cases = [
                     <li class="case <?= $case['class'] ?>">
                         <a href="<?= $case['url'] ?>" class="case__wrapper">
                             <p class="case__name"><?= $case['name'] ?></p>
-                            <p class="case__description"><?= $case['description'] ?></p>
                             <img src="<?= $case['img']['src'] ?>" alt="<?= $case['img']['alt'] ?>" class="case__img" />
+                            <p class="case__description"><?= $case['description'] ?></p>
                         </a>
                     </li>
                 <? endforeach ?>
 
-                <!-- <li></li> -->
+                <li class="case case_consultation bg-2">
+                    <div class="case__wrapper">
+                        <div class="case__top">
+                            <p class="case__name">Обсудите задачу с экспертом</p>
+                            <div class="case__description">Обсудим ваши задачи, предложим варианты решения</div>
+                        </div>
+                        <div class="case__bottom">
+                            <button class="btn btn_color">Получить консультацию</button>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </section>

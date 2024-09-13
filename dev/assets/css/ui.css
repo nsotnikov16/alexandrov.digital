@@ -58,6 +58,7 @@ hr {
     transform: scale(1);
     transition: all var(--transition-duration) ease-in-out;
     cursor: pointer;
+    font-size: 18px;
 }
 
 .btn_color {

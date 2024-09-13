@@ -1,5 +1,5 @@
-<li>
-    <a href="<?= $url ?: 'javascript:void(0)' ?>" class="service">
+<li class="service">
+    <a href="<?= $url ?: 'javascript:void(0)' ?>" class="service__wrapper">
         <div class="service__top">
             <? if (isset($img) && !empty($img)): ?>
                 <img class="service__img" src="<?= $img['src'] ?>" alt="<?= $img['alt'] ?>" />
