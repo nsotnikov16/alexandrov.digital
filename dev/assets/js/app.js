@@ -1,6 +1,14 @@
 if (typeof AOS !== 'undefined') {
     AOS.init();
 }
+
+if (typeof Fancybox !== 'undefined') {
+    Fancybox.bind("[data-fancybox]", {
+        // Your custom options
+    });
+}
+
+
 const html = document.querySelector('html');
 const header = document.querySelector('.header');
 const headerMobBtn = document.querySelector('.header__mob-btn')
@@ -110,27 +118,6 @@ function lazyLoad() {
 lazyLoad();
 
 window.addEventListener('scroll', handlerScroll);
-
-const swiper = new Swiper('.partners__wrapper', {
-    scrollbar: {
-        el: ".partners__wrapper .swiper-scrollbar",
-        //dragSize: 200
-    },
-    breakpoints: {
-        320: {
-            slidesPerView: 2,
-            spaceBetween: 20
-        },
-        420: {
-            slidesPerView: 3,
-            spaceBetween: 20
-        },
-        992: {
-            slidesPerView: 5,
-            spaceBetween: 50
-        }
-    }
-});
 
 /* Маска */
 window.addEventListener("DOMContentLoaded", function () {
@@ -296,7 +283,7 @@ setFormLogic(
                         if (index !== indexB) {
                             itemB.checked = false;
                             needInput.required = false;
-                        } 
+                        }
                         setRequiredLabel(needInput);
                     })
                 })
@@ -312,49 +299,6 @@ const setRequiredLabel = (input) => {
     input.required ? (reqElement.textContent) = '*' : (reqElement.textContent = '')
 }
 
-function createMatrixEffect() {
-    let C = document.querySelector("#matrix-effect"),
-        $ = C.getContext("2d"),
-        W = (C.width = C.parentNode.clientWidth - 20),
-        H = (C.height = C.parentNode.clientHeight);
-
-
-    const str = "А+Б0В-Г1Д=Е2Ё Ж3З И4Й К5Л М6Н О7П Р8С Т9У Ф!Х Ц?Ч Ш.ЩЪ,Ы Ь:ЭЮ;Я";
-    const matrix = str.split("");
-
-    let font = 11,
-        col = W / font,
-        arr = [],
-        duration = 130;
-
-    for (let i = 0; i < col; i++) arr[i] = 1;
-
-    function draw() {
-        $.fillStyle = "rgba(4,40,37,.55)";
-        $.fillRect(0, 0, W, H);
-
-        $.fillStyle = "white";
-        $.font = font + "px Montserrat";
-        for (let i = 0; i < arr.length; i++) {
-            let txt1 = matrix[Math.floor(Math.random() * matrix.length)];
-            let txt2 = matrix[Math.floor(Math.random() * matrix.length)];
-            let txt3 = matrix[Math.floor(Math.random() * matrix.length)];
-            $.fillText(txt1, i * font, arr[i] * font);
-            //$.fillText(txt2, i * font, arr[i] * font + 10);
-            //$.fillText(txt3, i * font, arr[i] * font + 20);
-            if (arr[i] * font > H && Math.random() > 0.975) arr[i] = 0;
-            arr[i]++;
-        }
-    }
-
-    setInterval(draw, duration);
-    window.addEventListener("resize", () => {
-        W = (C.width = C.parentNode.clientWidth);
-        H = (C.height = C.parentNode.clientHeight);
-    });
-}
-
-if (document.querySelector('.hero__matrix')) createMatrixEffect();
 
 /* Спойлеры */
 const spoilers = document.querySelectorAll('.spoiler')
@@ -362,5 +306,24 @@ if (spoilers.length > 0) {
     spoilers.forEach(spoiler => {
         const top = spoiler.querySelector('.spoiler__top')
         if (top) top.addEventListener('click', () => spoiler.classList.toggle('spoiler_open'))
+    })
+}
+
+const reviews = Array.from(document.querySelectorAll('.review'));
+const reviewsAll = document.querySelector('.reviews__all');
+if (reviews.length && reviewsAll) {
+    let showAll = false;
+    const startText = reviewsAll.textContent;
+    const hiddenReviews = reviews.filter(item => item.classList.contains('d-none'));
+    reviewsAll.addEventListener('click', () => {
+        if (!showAll) {
+            hiddenReviews.forEach(item => item.classList.remove('d-none'));
+            reviewsAll.textContent = 'Скрыть';
+            showAll = true;
+        } else {
+            hiddenReviews.forEach(item => item.classList.add('d-none'));
+            reviewsAll.textContent = startText;
+            showAll = false;
+        }
     })
 }

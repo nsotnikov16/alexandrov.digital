@@ -1,0 +1,109 @@
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.review {
+    padding: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;
+    border-radius: 20px;
+}
+
+.review__bottom {
+    margin: 40px 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.review__author {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 0px 20px;
+    margin-bottom: 10px;
+}
+
+.review__author-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    grid-row: 1/3;
+}
+
+.review__author-name {
+    font-family: var(--font-family2);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 34px;
+}
+
+.review__author-post {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color3);
+    grid-column: 2/3;
+}
+
+.review__text {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.review__photo {
+    flex-shrink: 0;
+    width: 70px;
+    height: 100px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.review__photo::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 9px);
+    left: calc(50% - 9px);
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.71118 17C13.8533 17 17.2112 13.6421 17.2112 9.5C17.2112 5.35786 13.8533 2 9.71118 2C5.56905 2 2.21118 5.35786 2.21118 9.5C2.21118 13.6421 5.56905 17 9.71118 17Z' stroke='%23F25A2C' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M20.2111 20.0002L15.0151 14.8042' stroke='%23F25A2C' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+.review__btn {
+    background: #F5F5F5;
+    width: 182px;
+    height: 50px;
+    color: var(--color);
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    margin-left: auto;
+}
+
+.review__btn svg {
+    width: 10.5px;
+    height: 10.5px;
+    margin-left: 14px;
+    stroke: var(--color);
+}
+
+.reviews__all {
+    display: block;
+    margin: 65px auto 0;
+    width: max-content;
+    padding-bottom: 4px;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--color2);
+    border-bottom: 2px dashed var(--color2);
+}
