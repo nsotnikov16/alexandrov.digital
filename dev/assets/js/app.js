@@ -312,18 +312,50 @@ if (spoilers.length > 0) {
 const reviews = Array.from(document.querySelectorAll('.review'));
 const reviewsAll = document.querySelector('.reviews__all');
 if (reviews.length && reviewsAll) {
-    let showAll = false;
-    const startText = reviewsAll.textContent;
-    const hiddenReviews = reviews.filter(item => item.classList.contains('d-none'));
-    reviewsAll.addEventListener('click', () => {
-        if (!showAll) {
-            hiddenReviews.forEach(item => item.classList.remove('d-none'));
-            reviewsAll.textContent = 'Скрыть';
-            showAll = true;
-        } else {
-            hiddenReviews.forEach(item => item.classList.add('d-none'));
-            reviewsAll.textContent = startText;
-            showAll = false;
+    const isReviewsPage = window.location.pathname === '/reviews/';
+    const maxHeightReview = 120;
+    const classHidden = 'review__text_hidden'
+    reviews.forEach((item, index) => {
+        let condition = index > 2
+        if (window.innerWidth > 767 && window.innerWidth <= 1150) condition = index > 1
+        if (window.innerWidth <= 767) condition = index > 0;
+        if (isReviewsPage) condition = false;
+        condition ? item.classList.add('d-none') : ''
+        const textBlock = item.querySelector('.review__text');
+        if (textBlock.clientHeight > maxHeightReview) {
+            textBlock.classList.add(classHidden);
+            const button = document.createElement('button')
+            button.classList.add('review__full');
+            button.textContent = 'Читать еще';
+            textBlock.insertAdjacentElement('afterend', button);
+            button.addEventListener('click', () => {
+                if (textBlock.classList.contains(classHidden)) {
+                    button.textContent = 'Скрыть'
+                    textBlock.classList.remove(classHidden)
+                } else {
+                    button.textContent = 'Читать еще';
+                    textBlock.classList.add(classHidden)
+                }
+            })
         }
     })
+
+    if (isReviewsPage) {
+        reviewsAll.remove()
+    } else {
+        let showAll = false;
+        const startText = reviewsAll.textContent;
+        const hiddenReviews = reviews.filter(item => item.classList.contains('d-none'));
+        reviewsAll.addEventListener('click', () => {
+            if (!showAll) {
+                hiddenReviews.forEach(item => item.classList.remove('d-none'));
+                reviewsAll.textContent = 'Скрыть';
+                showAll = true;
+            } else {
+                hiddenReviews.forEach(item => item.classList.add('d-none'));
+                reviewsAll.textContent = startText;
+                showAll = false;
+            }
+        })
+    }
 }

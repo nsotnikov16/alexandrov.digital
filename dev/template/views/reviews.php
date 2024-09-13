@@ -54,7 +54,7 @@ $reviews = [
             <h2 class="section__title"><span class="color">Отзывы</span> клиентов</h2>
             <ul class="reviews">
                 <? foreach ($reviews as $key => $review): ?>
-                    <li class="review <?= $key > 2 ? 'd-none' : '' ?>">
+                    <li class="review">
                         <div class="review__top">
                             <div class="review__author">
                                 <img class="review__author-photo" src="<?= $review['author']['photo'] ?>" alt="Отзыв <?= $review['author']['name'] ?>" />

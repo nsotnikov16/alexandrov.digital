@@ -53,6 +53,11 @@
     line-height: 24px;
 }
 
+.review__text_hidden {
+    height: 120px;
+    overflow: hidden;
+}
+
 .review__photo {
     flex-shrink: 0;
     width: 70px;
@@ -106,6 +111,18 @@
     cursor: pointer;
     color: var(--color2);
     border-bottom: 2px dashed var(--color2);
+}
+
+
+
+
+.review__full {
+    color: var(--color2);
+    background: transparent;
+    margin-top: 8px;
+    cursor: pointer;
+    padding: 0 0 2px 0;
+    border-bottom: 1px solid var(--color2);
 }
 
 @media(max-width: 1150px) {

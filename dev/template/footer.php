@@ -11,7 +11,7 @@
                     <a href="/devevelopment/" class="footer__nav-link">Разработка сайтов</a>
                 </nav>
                 <nav class="footer__nav">
-                    <a href="/seo/" class="footer__nav-link">Отзывы</a>
+                    <a href="/reviews/" class="footer__nav-link">Отзывы</a>
                     <a href="/advertising/" class="footer__nav-link">Контакты</a>
                     <a href="/development/" class="footer__nav-link">Политика конфиденциальности</a>
                 </nav>
