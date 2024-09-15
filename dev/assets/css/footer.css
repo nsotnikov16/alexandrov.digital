@@ -24,7 +24,7 @@
     display: grid;
     grid-template-columns: repeat(2, 200px);
     gap: 40px;
-    margin: 0 50px 0 auto;
+    margin: 0 70px 0 auto;
 }
 
 .footer__nav {

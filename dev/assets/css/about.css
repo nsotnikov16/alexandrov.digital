@@ -1,126 +1,163 @@
-.about {}
-
-.about__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px 50px;
-}
-
-.about__item {
+.about {
     display: flex;
-    align-items: center;
-}
-
-.about__item:nth-child(2n) {
-    margin-left: auto;
-}
-
-.about__item-img {
-    margin-right: 25px;
-    background: var(--bg);
-    width: 200px;
-    flex-shrink: 0;
-}
-
-.about__item-text {
-    font-size: 25px;
-    line-height: 1.4;
-}
-
-.about__row {
-    display: flex;
-    margin-bottom: 100px;
+    padding: 60px;
     justify-content: space-between;
-    align-items: center;
+    background: var(--bg2);
+    border-radius: 20px;
 }
 
-.about__row:nth-child(2n) {
-    flex-direction: row-reverse;
-}
-
-.about__row-left {
-    max-width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-    margin-right: 5%;
+.about__left {
+    max-width: 39%;
     flex-shrink: 0;
 }
 
-.about__row-img {
-    width: 100%;
+.about__right {
+    flex-shrink: 0;
+    max-width: 48.5%;
+    margin: 0 0 0 40px;
 }
 
-.about__row-left h2 {
-    font-size: 50px;
-}
-
-.about__row-right {
+.about__title {
+    font-family: var(--font-family2);
     font-size: 32px;
+    line-height: 42px;
+    font-weight: 700;
 }
 
-.about__row:nth-child(2n) .about__row-left {
-    margin-right: initial;
-    margin-left: 5%;
+.about__photo {
+    width: 100%;
+    border-radius: 20px;
+    margin: 0 0 32px;
 }
 
-@media(max-width: 1100px) {
-    .about__list {
-        grid-template-columns: 1fr;
-    }
-
-    .about__item-img {
-        margin-right: 35px;
-    }
-
-   
+.about__name {
+    margin: 0 0 10px;
 }
 
-@media(max-width: 992px) {
-    .about__row {
-        align-items: baseline;
+.about__post {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    color: var(--color2);
+}
+
+.about__exp {
+    margin: 0 0 20px;
+}
+
+.about__exp-title {
+    margin: 0 0 20px;
+}
+
+.about__exp-list {
+    padding: 20px 0;
+}
+
+.about__exp-item {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 26px;
+    padding: 0 0 0 50px;
+    position: relative;
+}
+
+.about__exp-item::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-size: 12px 10.5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTQnIGhlaWdodD0nMTQnIHZpZXdCb3g9JzAgMCAxNCAxNCcgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNMSA3LjQ2MTMxTDUuMTUzODUgMTIuMDc2N0wxMyAxLjkyMjg1JyBzdHJva2U9J3doaXRlJyBzdHJva2Utd2lkdGg9JzInIHN0cm9rZS1saW5lY2FwPSdyb3VuZCcgc3Ryb2tlLWxpbmVqb2luPSdyb3VuZCcvPjwvc3ZnPgo=");
+    background-color: var(--color2);
+    border-radius: 4px;
+    left: 0;
+    top: -2px;
+    position: absolute;
+}
+
+.about__exp-item:last-child {
+    margin-bottom: 0;
+}
+
+.about__quote {
+    padding: 40px;
+    background: white;
+    margin: 0;
+}
+
+.about__quote-title {
+    margin: 0 0 20px;
+}
+
+.about__quote p {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 20px;
+}
+
+.about_dark {
+    background: var(--color);
+    color: white !important
+}
+
+.about_dark .about__quote {
+    color: var(--color) !important;
+}
+
+
+@media(max-width: 1025px) {
+    .about {
         flex-direction: column;
-        margin-bottom: 55px;
+        padding: 40px;
     }
 
-    .about__row:last-child {
-        margin-bottom: 0;
+    .about__right {
+        margin: 40px 0 0;
     }
 
-   
-
-    .about__row:nth-child(2n) {
-        flex-direction: column;
+    .about__right,
+    .about__left {
+        max-width: initial;
     }
 
-    .about__row:nth-child(2n) .about__row-left {
-        margin-right: 0;
-        margin-left: 0;
-    }
-
-    .about__row-left {
-        max-width: 100%;
+    .about__photo {
+        max-width: 375px;
     }
 }
 
 @media(max-width: 767px) {
-    .about__item {
-        flex-direction: column;
-        text-align: center;
+    .about {
+        padding: 40px 20px;
     }
 
-    .about__item-img {
-        margin-right: 0;
-        margin-bottom: 15px;
-        width: 170px;
+    .about__title {
+        font-size: 24px;
+        line-height: 32px;
     }
 
-    .about__item-text {
-        font-size: 18px;
+    .about__name {
+        margin: 0;
     }
 
-    .about__row-left h2 {
-        font-size: 35px;
+    .about__photo {
+        margin: 0 0 20px;
+    }
+
+    .about__post {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .about__exp-title {
+        font-size: 32px;
+    }
+
+    .about__exp-item::before {
+        top: 10px;
+    }
+
+    .about__quote {
+        padding: 20px;
     }
 }
