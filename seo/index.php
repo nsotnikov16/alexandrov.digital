@@ -9,4 +9,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php';
     'imgAlt' => 'SEO-продвижение сайтов для бизнеса в Сургуте',
     'imgClass' => 'hero__img_seo'
 ]) ?>
+<?php view('services/seo') ?>
+<?php view('about', [ 'addAboutClass' => 'about_dark']) ?>
+<?php view('cases') ?>
+<?php view('reviews') ?>
+<?php view('lead/main') ?>
 <?php getFooter();
