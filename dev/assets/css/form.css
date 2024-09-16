@@ -107,4 +107,14 @@ textarea.form__field {
     .form__agree label::before {
         top: 2px;
     }
+
+    .form__text {
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 400;
+    }
+
+    .form__row {
+        flex-wrap: wrap;
+    }
 }
