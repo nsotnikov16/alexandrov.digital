@@ -10,4 +10,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php';
     'imgClass' => 'hero__img_adv',
     'addClass' => 'hero_adv'
 ]) ?>
+<?php view('services/advertising') ?>
+<?php view('about', ['addAboutClass' => 'about_dark']) ?>
+<?php view('cases') ?>
+<?php view('reviews') ?>
+<?php view('lead/main') ?>
 <?php getFooter();
