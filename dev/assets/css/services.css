@@ -5,7 +5,7 @@
 }
 
 .service {
-    background: var(--color3);
+    background: #F5F5F5;
     border-radius: 20px;
     height: 100%;
 }
@@ -64,6 +64,10 @@
 
 .service__deadline {
     margin-bottom: 30px;
+}
+
+.services_inner .service__button {
+    background-color: var(--color2);
 }
 
 @media(max-width: 1025px) {

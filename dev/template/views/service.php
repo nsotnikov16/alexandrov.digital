@@ -1,5 +1,5 @@
 <li class="service">
-    <a href="<?= $url ?: 'javascript:void(0)' ?>" class="service__wrapper">
+    <a href="<?= $url ?? 'javascript:void(0)' ?>" class="service__wrapper">
         <div class="service__top">
             <? if (isset($img) && !empty($img)): ?>
                 <img class="service__img" src="<?= $img['src'] ?>" alt="<?= $img['alt'] ?>" />
@@ -17,7 +17,7 @@
                 <p class="service__deadline"><?= $deadline ?></p>
             <? endif; ?>
             <? if (isset($button) && !empty($button)): ?>
-                <button <?= $button['url'] ?? ('onclick="location = ' . $button['url'] . '"') ?> href="<?= $button['url'] ?: 'javscript:void(0)' ?>" class="service__button btn" <?= $button['attributes'] ?? '' ?>><?= $button['text'] ?></button>
+                <button <?= isset($button['url']) ? ('onclick="location = ' . $button['url'] . '"') : '' ?> href="<?= $button['url'] ?? 'javscript:void(0)' ?>" class="service__button btn" <?= $button['attributes'] ?? '' ?>><?= $button['text'] ?></button>
             <? endif ?>
         </div>
     </a>

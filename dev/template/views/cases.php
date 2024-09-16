@@ -72,7 +72,7 @@ $cases = [
 ]
 ?>
 <? if (!empty($cases)): ?>
-    <section class="section">
+    <section class="section <?= $addSectionClass ?? ''?>">
         <div class="container">
             <h2 class="section__title">Наши кейсы</h2>
             <ul class="cases">
