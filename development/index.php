@@ -10,7 +10,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php';
     'imgClass' => 'hero__img_dev'
 ]) ?>
 <?php view('info', [
-    'addSectionClass' => 'bg-2',
     'title' => '<span class="color">Особенности</span> нашего подхода к разработке сайтов',
     'list' => [
         [
@@ -41,7 +40,13 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php';
         ],
     ]
 ]) ?>
-
+<?php view('promo', [
+    'title' => 'Мы делаем сайты, которые приносят пользу для ваших клиентов и для вас',
+    'subtitle' => 'Сайт — это инструмент продаж, он должен решать задачи пользователей. <br>
+    Если он закрывает потребность пользователя, значит у вас будут заказывать. <br>
+    Это главный принцип, которым мы руководствуемся при создании сайтов.',
+    'class' => 'promo_dev'
+]) ?>
 <?php view('services/development') ?>
 <?php view('about', ['addSectionClass' => 'bg-2', 'addAboutClass' => 'about_dark']) ?>
 <?php view('cases', ['addSectionClass' => 'bg-2']) ?>

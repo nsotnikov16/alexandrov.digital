@@ -1,5 +1,5 @@
 <? if (isset($list) && !empty($list)): ?>
-    <section class="section <?= $addSectionClass ?? '' ?>">
+    <section class="section bg-2">
         <div class="container">
             <div class="info">
                 <? if (isset($title) && $title) : ?>

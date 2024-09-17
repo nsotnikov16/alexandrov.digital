@@ -51,7 +51,11 @@ $reviews = [
 <? if (!empty($reviews)): ?>
     <section class="section bg-2">
         <div class="container">
-            <h2 class="section__title"><span class="color">Отзывы</span> клиентов</h2>
+            <? if (isset($h1) && $h1): ?>
+                <h1 class="section__title"><span class="color">Отзывы</span> клиентов</h1>
+            <? else: ?>
+                <h2 class="section__title"><span class="color">Отзывы</span> клиентов</h2>
+            <? endif; ?>
             <ul class="reviews">
                 <? foreach ($reviews as $key => $review): ?>
                     <li class="review">

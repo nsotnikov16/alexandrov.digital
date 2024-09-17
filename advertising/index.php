@@ -11,7 +11,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php';
     'addClass' => 'hero_adv'
 ]) ?>
 <?php view('info', [
-    'addSectionClass' => 'bg-2',
     'title' => '<span class="color">Особенности</span> моего подхода к ведению рекламных кампаний',
     'list' => [
         [
@@ -53,6 +52,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php';
             'detail' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis officia labore et, sunt consequuntur repudiandae cupiditate facilis nam ipsam neque.'
         ],
     ]
+]) ?>
+<?php view('promo', [
+    'title' => 'Во всех остальных случаях буду рад вам помочь ',
+    'subtitle' => 'Оставляйте заявку, и мы вместе подумаем<br> над реализацией ваших целей.',
+    'class' => 'promo_adv'
 ]) ?>
 <?php view('services/advertising') ?>
 <?php view('about', ['addAboutClass' => 'about_dark']) ?>
