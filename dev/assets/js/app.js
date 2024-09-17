@@ -14,7 +14,6 @@ const header = document.querySelector('.header');
 const headerMobBtn = document.querySelector('.header__mob-btn')
 let prevScroll = window.scrollY;
 
-
 if (header && headerMobBtn) {
     const headerNavLinks = header.querySelectorAll('.header__nav-link');
     if (headerNavLinks.length) {
@@ -77,13 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
 function handlerScroll() {
     const contentHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrollProgress = (window.scrollY / contentHeight) * 100;
-
-    // if (typeof window.noChangeBackround === 'undefined') {
-    //     html.classList.remove('bg-2');
-    //     if (scrollProgress >= 15) html.classList.add('bg-2');
-    // }
-
-
     if (header) {
         header.classList.remove('header_scrolled');
         header.classList.remove('header_hide');
@@ -358,4 +350,16 @@ if (reviews.length && reviewsAll) {
             }
         })
     }
+}
+
+const infoFullItems = document.querySelectorAll('[data-info-full]');
+if (infoFullItems.length) {
+    const classFull = 'info__item-text_full';
+    infoFullItems.forEach(item => {
+        const parent = item.closest('.info__item-text');
+        item.addEventListener('click', () => {
+            parent.classList.toggle(classFull);
+            item.textContent = parent.classList.contains(classFull) ? 'Cкрыть' : 'Подробнее'
+        })
+    })
 }
