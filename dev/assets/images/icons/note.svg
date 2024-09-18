@@ -1,0 +1,9 @@
+<svg viewBox="0 0 6 21" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4 20V7.625C4 7.004 3.496 6.5 2.875 6.5H1" stroke-width="2"
+        stroke-miterlimit="10" stroke-linecap="square" />
+    <path
+        d="M4 2.75C4.41421 2.75 4.75 2.41421 4.75 2C4.75 1.58579 4.41421 1.25 4 1.25C3.58579 1.25 3.25 1.58579 3.25 2C3.25 2.41421 3.58579 2.75 4 2.75Z"
+        stroke-width="2" stroke-miterlimit="10"
+        stroke-linecap="square" />
+</svg>
+    
