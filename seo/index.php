@@ -38,6 +38,14 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php';
     'class' => 'promo_seo'
 ]) ?>
 <?php view('services/seo') ?>
+<?php view('price', ['list' => [
+    ['name' => 'Разработка сайта на Tilda', 'price' => 'от 40 000 ₽'],
+    ['name' => 'Разработка дизайна сайта', 'price' => 'от 40 000 ₽'],
+    ['name' => 'Разработка сайта на 1С-Битрикс', 'price' => 'от 40 000 ₽'],
+    ['name' => 'Проектирование структуры сайта', 'price' => 'от 15 000 ₽'],
+    ['name' => 'Доработка сайтов', 'price' => 'от 3 000 ₽'],
+    ['name' => 'Корректировка готовых сайтов', 'price' => 'от 4 000 ₽'],
+]]) ?>
 <?php view('about', ['addAboutClass' => 'about_dark']) ?>
 <?php view('cases') ?>
 <?php view('reviews') ?>

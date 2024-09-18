@@ -1,0 +1,38 @@
+
+.page404__bottom {
+    margin: 30px auto 0;
+    text-align: center;
+}
+
+.page404 .hero__img {
+    position: static;
+    margin: 0 auto;
+    display: block;
+}
+
+.page404__text {
+    font-size: 35px;
+    font-family: var(--font-family2);
+    margin: 0 0 20px;
+    font-weight: 700;
+}
+
+.page404__nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.page404__nav-link {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--color2);
+    width: max-content;
+    display: inline-block;
+    margin: 0 auto 15px;
+}
+
+@media(max-width: 767px) {
+    .page404__text {
+        font-size: 28px;
+    }
+}

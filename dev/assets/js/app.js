@@ -363,3 +363,25 @@ if (infoFullItems.length) {
         })
     })
 }
+const workQuestion = document.querySelector('.work_question');
+if (workQuestion) {
+    let scale;
+    const scrollWorkQuestion = () => {
+        const elementTop = workQuestion.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        const elementHeight = workQuestion.offsetHeight;
+
+        // Определяем процент, на сколько элемент виден
+        const start = windowHeight * 0.8; // Начало изменения scale (например, когда элемент на 80% ниже верхней границы экрана)
+        const end = windowHeight * 0.2; // Конец изменения scale (когда элемент на 20% ниже верхней границы экрана)
+
+        // Рассчитываем, где находится элемент относительно окна
+        if (elementTop < start && elementTop + elementHeight > end) {
+            const progress = (start - elementTop) / (start - end); // Процент, на сколько элемент виден
+            const scaleValue = scale = Math.min(1, 0.5 + (progress * 0.5)); // scale изменяется от 0.5 до 1
+            workQuestion.style.transform = `scale(${scaleValue})`;
+        }
+        if (scale >= 1) document.removeEventListener('scroll', scrollWorkQuestion);
+    }
+    document.addEventListener('scroll', scrollWorkQuestion);
+}

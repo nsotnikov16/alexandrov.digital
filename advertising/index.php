@@ -59,6 +59,14 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php';
     'class' => 'promo_adv'
 ]) ?>
 <?php view('services/advertising') ?>
+<?php view('price', ['list' => [
+    ['name' => 'Аудит рекламной кампании', 'price' => 'от 3 000 ₽'],
+    ['name' => 'Подключение сервиса отслеживания звонков', 'price' => 'от 5 000 ₽'],
+    ['name' => 'UX/UI аудит и улучшение сайта', 'price' => 'от 15 000 ₽'],
+    ['name' => 'Управление репутацией в интернете (ORM)', 'price' => 'от 10 000 ₽'],
+    ['name' => 'Создание контента', 'price' => 'от 1 000 ₽'],
+    ['name' => 'SEO-оптимизация', 'price' => 'от 25 000 ₽'],
+]]) ?>
 <?php view('about', ['addAboutClass' => 'about_dark']) ?>
 <?php view('cases') ?>
 <?php view('reviews') ?>
