@@ -70,5 +70,21 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php';
 <?php view('about', ['addAboutClass' => 'about_dark']) ?>
 <?php view('cases') ?>
 <?php view('reviews') ?>
+<?php view('faq', [
+    'list' => [
+        [
+            'question' => 'Даёте ли вы гарантии на достижение результата?',
+            'answer' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quos minus neque ex tempore, ad maxime alias doloremque adipisci repellendus!'
+        ],
+        [
+            'question' => 'Как формируется цена на SEO-продвижение сайтов?',
+            'answer' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quos minus neque ex tempore, ad maxime alias doloremque adipisci repellendus!'
+        ],
+        [
+            'question' => 'Какие сроки продвижения сайта?',
+            'answer' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quos minus neque ex tempore, ad maxime alias doloremque adipisci repellendus!'
+        ],
+    ]
+]) ?>
 <?php view('lead/main') ?>
 <?php getFooter();

@@ -1,13 +1,15 @@
 .spoiler {
-    border-bottom: 1px solid var(--color);
+    border-radius: 20px;
+
+    background: var(--bg2);
+    margin: 0 0 20px;
 }
 
-.spoiler:first-child {
-    border-top: 1px solid var(--color);
+.spoiler:last-child {
+    margin: 0;
 }
 
 .spoiler__top {
-    padding: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -16,12 +18,14 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    padding: 29px 40px;
 }
 
 .spoiler__name {
+    font-family: var(--font-family2);
     font-weight: 500;
-    font-size: 24px;
-    line-height: 140%;
+    font-size: 32px;
+    line-height: 42px;
     margin-right: 20px;
 }
 
@@ -35,12 +39,14 @@
     transition: transform 0.3s ease-in;
     transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
 }
-.spoiler__btn::before, .spoiler__btn::after {
+
+.spoiler__btn::before,
+.spoiler__btn::after {
     content: "";
     display: block;
     width: 26px;
     height: 2px;
-    background: var(--color);
+    background: var(--color2);
     border-radius: 2px;
     opacity: 0.8;
 }
@@ -52,7 +58,7 @@
 }
 
 .spoiler__bottom {
-    padding: 0 20px;
+    padding: 0 40px;
     max-height: 0;
     -webkit-transform: translateY(-10%);
     -ms-transform: translateY(-10%);
@@ -73,7 +79,8 @@
     transform: translateY(0);
     overflow: visible;
     opacity: 1;
-    padding-bottom: 10px;
+    padding: 0 40px 29px;
+
 }
 
 .spoiler_open .spoiler__top {
@@ -81,21 +88,45 @@
 }
 
 .spoiler_open .spoiler__btn {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
 }
 
-.spoiler_open .spoiler__btn::after {
-    opacity: 0;
+
+.spoiler__content {
+    padding: 20px 0 0;
+    font-size: 16px;
+    line-height: 24px;
 }
 
-.spoiler .content {
-    padding-bottom: 30px;
-}
+@media(max-width: 992px) {
+    .spoiler__top {
+        padding: 14px 20px;
+    }
 
-@media(max-width: 767px) {
+    .spoiler__bottom {
+        padding: 0 20px;
+    }
+
+    .spoiler_open .spoiler__bottom {
+        padding: 0 20px 14px;
+    }
+
     .spoiler__name {
         font-size: 18px;
+        line-height: 26px;
+    }
+
+    .spoiler__content {
+        padding: 15px 0 0;
+        font-size: 14px;
+    }
+
+    .spoiler__btn::before,
+    .spoiler__btn::after {
+        width: 20px;
     }
 }
+
+@media(max-width: 767px) {}

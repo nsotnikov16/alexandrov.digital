@@ -8,7 +8,7 @@
                 <nav class="footer__nav">
                     <a href="/seo/" class="footer__nav-link">SEO продвижение</a>
                     <a href="/advertising/" class="footer__nav-link">Контекстная реклама </a>
-                    <a href="/devevelopment/" class="footer__nav-link">Разработка сайтов</a>
+                    <a href="/development/" class="footer__nav-link">Разработка сайтов</a>
                 </nav>
                 <nav class="footer__nav">
                     <a href="/reviews/" class="footer__nav-link">Отзывы</a>
