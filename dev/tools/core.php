@@ -20,3 +20,16 @@ function view(string $view, array $vars = [])
 
     include $_SERVER['DOCUMENT_ROOT'] . VIEWS_PATH . $view . '.php';
 }
+
+function addHeadString(string $string)
+{
+    if (!isset($GLOBALS['additionalStringsHead'])) $GLOBALS['additionalStringsHead'] = [];
+    $GLOBALS['additionalStringsHead'][] = $string;
+}
+
+function showHeadStrings() {
+    if (!isset($GLOBALS['additionalStringsHead']) || empty($GLOBALS['additionalStringsHead'])) return;
+    foreach ($GLOBALS['additionalStringsHead'] as $string) {
+        echo $string . PHP_EOL;
+    }
+}

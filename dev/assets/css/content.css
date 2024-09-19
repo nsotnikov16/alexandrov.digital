@@ -11,7 +11,13 @@ u {
 
 .content ul {
     list-style-type: disc;
-    padding-left: 15px;
+    padding-left: 20px;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.content ol {
+    padding-left: 20px;
     font-size: 18px;
     line-height: 28px;
 }
@@ -48,4 +54,46 @@ ul.disc-color li::marker {
     font-size: 24px;
     line-height: 34px;
     padding-left: 20px;
+}
+
+.content__row {
+    display: grid;
+    grid-template-columns: 440px 1fr;
+    gap: 40px;
+}
+
+.content__project {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.content__project>* {
+    display: grid;
+    gap: 10px;
+}
+
+.content__project a {
+    max-width: max-content;
+}
+
+.content__project>*>*:last-child {
+    font-size: 24px;
+    line-height: 34px;
+}
+
+
+.content h2 {
+    font-family: var(--font-family2);
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 700;
+}
+
+.content h3 {
+    font-size: 32px;
+    line-height: 42px;
+    font-family: var(--font-family2);
+    font-weight: 500;
+    margin: 0 0 30px;
 }
