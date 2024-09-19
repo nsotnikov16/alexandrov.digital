@@ -33,7 +33,7 @@ main {
 
 .section__title {
     font-family: var(--font-family2);
-    margin-bottom: 60px;
+    margin-bottom: 55px;
     line-height: 78px;
     font-weight: 700;
     font-size: 64px;
@@ -78,9 +78,8 @@ main {
 }
 
 .btn-up {
-    display: none;
     position: fixed;
-    background: var(--color);
+    background: var(--color2);
     right: 20px;
     bottom: 20px;
     border-radius: 22px;

@@ -25,8 +25,9 @@
         </div>
     </div>
 </footer>
-
-<div class="btn-up btn-up-hide"></div>
+<? // кнопка скролла в начало страницы (вернуть по желанию) 
+// <div class="btn-up btn-up-hide"></div>
+?>
 <? include_once __DIR__ . '/scripts.php' ?>
 </body>
 

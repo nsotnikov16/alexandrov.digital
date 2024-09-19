@@ -56,7 +56,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php';
     ['name' => 'Доработка сайтов', 'price' => 'от 3 000 ₽'],
     ['name' => 'Корректировка готовых сайтов', 'price' => 'от 4 000 ₽'],
 ]]) ?>
-<? view('works', [
+<?php view('works', [
     'title' => '<span class="color">Какие работы мы делаем</span> в рамках разработки сайтов',
     'list' => [
         [

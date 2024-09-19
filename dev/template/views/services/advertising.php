@@ -54,4 +54,19 @@ $services = [
 Обычно, итоговая стоимость не сильно отличается от указанной. Но каждый проект уникален, поэтому оценивается индивидуально.']) ?>
         </div>
     </section>
+    <section class="section">
+        <div class="container">
+            <h2 class="section__title"><span class="color">Цены на продвижение</span><br>
+                некоторых тематик в Сургуте</h2>
+            <div class="content content_services">
+                <ul class="disc-color font-family-2 font-medium">
+                    <li>Стоматология: 40 000 ₽/месяц</li>
+                    <li>Медицинский центр: 50 000 ₽/месяц</li>
+                    <li>Строительство домов: 45 000 ₽/месяц</li>
+                    <li>Курсы иностранных языков: 35 000 ₽/месяц</li>
+                    <li>Производство металлоконструкций: 45 000 ₽/месяц</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 <? endif; ?>
