@@ -114,6 +114,14 @@ html {
     font-size: 30px;
 }
 
+.bg-gray {
+    background: #F5F5F5 !important;
+}
+
+.bg-green {
+    background: #C8F1CF !important;
+}
+
 
 
 @media (max-width: 767px) {
@@ -124,7 +132,7 @@ html {
     .big {
         font-size: 40px;
     }
-    
+
     .currency {
         font-size: 20px;
     }
@@ -141,4 +149,3 @@ html {
         transform: translateY(1400%);
     }
 }
-

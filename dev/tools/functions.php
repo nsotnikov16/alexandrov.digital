@@ -46,3 +46,16 @@ function getHrefForPhone($phone) {
     if ($replace[0] === '7') $replace = '+' . $replace;
     return 'tel:' . $replace;
 }
+
+function addHeadString(string $string)
+{
+    if (!isset($GLOBALS['additionalStringsHead'])) $GLOBALS['additionalStringsHead'] = [];
+    $GLOBALS['additionalStringsHead'][] = $string;
+}
+
+function showHeadStrings() {
+    if (!isset($GLOBALS['additionalStringsHead']) || empty($GLOBALS['additionalStringsHead'])) return;
+    foreach ($GLOBALS['additionalStringsHead'] as $string) {
+        echo $string . PHP_EOL;
+    }
+}

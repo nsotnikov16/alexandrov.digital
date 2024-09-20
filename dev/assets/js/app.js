@@ -385,3 +385,21 @@ if (workQuestion) {
     }
     document.addEventListener('scroll', scrollWorkQuestion);
 }
+
+function handleScrollOnce(element, callback) {
+    let hasBeenCalled = false;
+
+    function checkVisibility() {
+        const rect = element.getBoundingClientRect();
+        const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight + 300;
+
+        if (isVisible && !hasBeenCalled) {
+            if (typeof callback == 'function') callback()
+            hasBeenCalled = true;
+            window.removeEventListener('scroll', checkVisibility); // Убираем слушатель после вызова
+        }
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility();
+}

@@ -1,6 +1,7 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php';
 addHeadString('<script src="' . ASSETS_PATH . 'js/chart.js"></script>');
+addHeadString('<script src="/easygoenglish_seo/script.js"></script>');
 ?>
 <?php getHeader(); ?>
 <?php view('hero/case', [
@@ -19,209 +20,278 @@ addHeadString('<script src="' . ASSETS_PATH . 'js/chart.js"></script>');
         ],
     ]
 ]); ?>
-<section class="section">
-    <div class="container content">
-        <div class="content__row">
-            <h2>Информация<br>
-                о проекте
-            </h2>
-            <div>
-                <p>Компания EasyGoEnglish — это студия английского языка, специализирующаяся на подготовке детей к успешной сдаче ОГЭ и ЕГЭ. На момент обращения к нам у компании отсутствовал сайт, и не была выстроена схема работы по привлечению клиентов из Интернета.</p>
-                <div class="content__project">
-                    <div>
-                        <span>Сайт</span>
-                        <a class="color font-family-2 font-weight" href="https://easygoenglish.ru" target="_blank">https://easygoenglish.ru</a>
-                    </div>
-                    <div>
-                        <span>Услуга</span>
-                        <span class="color font-family-2 font-weight">Seo-продвижение</span>
+<article>
+    <section class="section">
+        <div class="container content">
+            <div class="content__row">
+                <h2>Информация<br>
+                    о проекте
+                </h2>
+                <div>
+                    <p>Компания EasyGoEnglish — это студия английского языка, специализирующаяся на подготовке детей к успешной сдаче ОГЭ и ЕГЭ. На момент обращения к нам у компании отсутствовал сайт, и не была выстроена схема работы по привлечению клиентов из Интернета.</p>
+                    <div class="content__project">
+                        <div>
+                            <span>Сайт</span>
+                            <a class="color font-family-2 font-weight" href="https://easygoenglish.ru" target="_blank">https://easygoenglish.ru</a>
+                        </div>
+                        <div>
+                            <span>Услуга</span>
+                            <span class="color font-family-2 font-weight">Seo-продвижение</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<section class="section bg-2">
-    <div class="container content">
-        <div class="content__row">
-            <h2>Цели и задачи
-            </h2>
-            <div>
-                <ol>
-                    <li>Разработка сайта и фирменного стиля для компании</li>
-                    <li>Продвижение сайта в поисковых системах</li>
-                    <li>Привлечение клиентов из интернета к началу набора детей на новый учебный год</li>
-                </ol>
+    </section>
+    <section class="section bg-2">
+        <div class="container content">
+            <div class="content__row">
+                <h2>Цели и задачи
+                </h2>
+                <div>
+                    <ol>
+                        <li>Разработка сайта и фирменного стиля для компании</li>
+                        <li>Продвижение сайта в поисковых системах</li>
+                        <li>Привлечение клиентов из интернета к началу набора детей на новый учебный год</li>
+                    </ol>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<section class="section">
-    <div class="container content">
-        <div class="content__row">
-            <h2>Решение</h2>
-            <div>
-                <p>Чтобы сайт после запуска сразу был готов к продвижению, мы на этапе проектирования привлекли к работе SEO-специалиста, который собрал все целевые запросы, подходящие для продвижения.</p>
-                <p>На основании этих запросов проанализировали, кто из конкурентов имеет наибольшую видимость в поисковых системах.</p>
-                <p>Проанализировали их сайты, уникальное торговое предложение, составили матрицу их преимуществ, чтобы понять, за счёт каких факторов поисковые системы их ранжируют на высоких позициях, и выделили для себя основные блоки, на которых нужно сосредоточиться и внедрить на сайт при его разработке.
-                </p>
-                <h3>После разработки сайта — начали активную фазу продвижения:</h3>
-                <ul>
-                    <li>Провели внутреннюю оптимизацию сайта</li>
-                    <li>Оптимизировали тексты под продвигаемые запросы</li>
-                    <li>Зарегистрировали сайт и компанию в основных справочниках: 2GIS, Яндекс Карты, Гугл Карты и ряде тематических каталогов.</li>
-                    <li>Начиная с третьего месяца работы начали писать тематические статьи на различных новостных порталах, с ссылками со статей на наш сайт</li>
-                    <li> После нескольких месяцев работы, на основании накопленной статистики по поведению пользователей на сайте — внедрили на сайт ряд изменений с целью увеличения конверсии. После появления первых отзывов о работе компании в справочниках — добавили блок с отзывами на сайт.</li>
-                    <li>Оптимизировали скорость работы сайта</li>
-                </ul>
+    </section>
+    <section class="section">
+        <div class="container content">
+            <div class="content__row">
+                <h2>Решение</h2>
+                <div>
+                    <p>Чтобы сайт после запуска сразу был готов к продвижению, мы на этапе проектирования привлекли к работе SEO-специалиста, который собрал все целевые запросы, подходящие для продвижения.</p>
+                    <p>На основании этих запросов проанализировали, кто из конкурентов имеет наибольшую видимость в поисковых системах.</p>
+                    <p>Проанализировали их сайты, уникальное торговое предложение, составили матрицу их преимуществ, чтобы понять, за счёт каких факторов поисковые системы их ранжируют на высоких позициях, и выделили для себя основные блоки, на которых нужно сосредоточиться и внедрить на сайт при его разработке.
+                    </p>
+                    <h3>После разработки сайта — начали активную фазу продвижения:</h3>
+                    <ul>
+                        <li>Провели внутреннюю оптимизацию сайта</li>
+                        <li>Оптимизировали тексты под продвигаемые запросы</li>
+                        <li>Зарегистрировали сайт и компанию в основных справочниках: 2GIS, Яндекс Карты, Гугл Карты и ряде тематических каталогов.</li>
+                        <li>Начиная с третьего месяца работы начали писать тематические статьи на различных новостных порталах, с ссылками со статей на наш сайт</li>
+                        <li> После нескольких месяцев работы, на основании накопленной статистики по поведению пользователей на сайте — внедрили на сайт ряд изменений с целью увеличения конверсии. После появления первых отзывов о работе компании в справочниках — добавили блок с отзывами на сайт.</li>
+                        <li>Оптимизировали скорость работы сайта</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<section class="section bg-2">
-    <div class="container content">
-        <div class="content__row">
-            <h2>Результат работы</h2>
-            <div>
-                <p>За 4 месяца, которые оставались до начала нового учебного года удалось вывести сайт в ТОП выдачи, и привлечь за счёт проделанных работ целевой трафик на сайт:</p>
-                <canvas id="chart1"></canvas>
-                <canvas id="chart2" width="100%" height="100%"></canvas>
-                <script>
-                    const data1 = {
-                        datasets: [{
-                            label: 'Визиты',
-                            data: [{
-                                    x: 'Март 22',
-                                    y: 5
-                                },
-                                {
-                                    x: 'Апр-22',
-                                    y: 7
-                                },
-                                {
-                                    x: 'Май-22',
-                                    y: 5
-                                },
-                                {
-                                    x: 'Июн-22',
-                                    y: 30
-                                },
-                                {
-                                    x: 'Июл-22',
-                                    y: 40
-                                },
-                                {
-                                    x: 'Авг-22',
-                                    y: 55
-                                },
-                                {
-                                    x: 'Сен-22',
-                                    y: 115
-                                },
-                                {
-                                    x: 'Окт-22',
-                                    y: 150
-                                },
-                                {
-                                    x: 'Ноя-22',
-                                    y: 140
-                                },
-                                {
-                                    x: 'Дек-22',
-                                    y: 135
-                                },
-                                {
-                                    x: 'Янв-23',
-                                    y: 125
-                                },
-                                {
-                                    x: 'Фев-23',
-                                    y: 160
-                                },
-                                {
-                                    x: 'Сейчас',
-                                    y: 170
-                                }
-                            ],
-                            backgroundColor: 'rgba(248, 172, 149, 0.7)',
-                            borderColor: '#f25a2c',
-                            borderWidth: 2,
-                            fill: true, // Заливка под графиком
-                            pointRadius: 4, // Размер точек на графике
-                            pointBackgroundColor: '#f25a2c' // Цвет точек
-                        }]
-                    };
-
-                    const data2 = {
-                        labels: ['Март 2022', 'Апрель 2022', 'Май 2022', 'Июнь 2022', 'Июль 2022', 'Август 2022'],
-                        datasets: [{
-                            label: 'Показатель',
-                            data: [0, 10, 15, 30, 50, 120],
-                            backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                            borderColor: 'rgba(54, 162, 235, 1)',
-                            borderWidth: 1,
-                            fill: true,
-                            pointRadius: 4,
-                            pointBackgroundColor: 'rgba(54, 162, 235, 1)'
-                        }]
-                    };
-
-                    // Инициализация первой диаграммы
-                    const ctx1 = document.getElementById('chart1').getContext('2d');
-                    new Chart(ctx1, {
-                        type: 'line',
-                        data: data1,
-                        options: {
-                            scales: {
-                                y: {
-                                    ticks: {
-                                        stepSize: 50 // Кратность оси Y — шаг 50
-                                    },
-                                    title: {
-                                        display: true, // Отображение подписи оси X
-                                        text: 'Визиты', // Текст для оси X
-                                        font: {
-                                            size: 16 // Размер шрифта подписи оси X
-                                        }
-                                    }
-                                },
-                                x: {
-                                    title: {
-                                        display: true, // Отображение подписи оси X
-                                        text: 'Интервалы дат', // Текст для оси X
-                                        font: {
-                                            size: 16 // Размер шрифта подписи оси X
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    });
-
-                    // Инициализация второй диаграммы
-                    const ctx2 = document.getElementById('chart2').getContext('2d');
-                    new Chart(ctx2, {
-                        type: 'line',
-                        data: data2,
-                        options: {
-                            scales: {
-                                y: {
-                                    beginAtZero: true
-                                }
-                            }
-                        }
-                    });
-                </script>
-
-                <p>Так как потенциал ещё оставался, решено было продолжить продвижение сайта, в первую очередь чтобы улучшить видимость сайта в Google. Для этого продолжили оптимизацию сайта, чтобы уже к следующему учебному году иметь сайт с максимальной видимостью в поисковых системах. Спустя 10 месяцев трафик увеличился ещё в 1,5 раза:</p>
-                <!-- д -->
-                <h3>Позиции сайта в Google</h3>
-                <!-- т -->
-                <h3>Позиции сайта в Яндекс</h3>
-                <!-- т -->
+    </section>
+    <section class="section bg-2">
+        <div class="container content">
+            <div class="content__row">
+                <h2>Результат работы</h2>
+                <div>
+                    <p>За 4 месяца, которые оставались до начала нового учебного года удалось вывести сайт в ТОП выдачи, и привлечь за счёт проделанных работ целевой трафик на сайт:</p>
+                    <canvas class="chart" id="chart1"></canvas>
+                    <canvas class="chart" id="chart2"></canvas>
+                    <p>Так как потенциал ещё оставался, решено было продолжить продвижение сайта, в первую очередь чтобы улучшить видимость сайта в Google. Для этого продолжили оптимизацию сайта, чтобы уже к следующему учебному году иметь сайт с максимальной видимостью в поисковых системах. Спустя 10 месяцев трафик увеличился ещё в 1,5 раза:</p>
+                    <canvas class="chart" id="chart3"></canvas>
+                    <h3>Позиции сайта в Google</h3>
+                    <div class="content__table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td class="bg-gray">Запросы</td>
+                                    <td class="bg-gray">Частота</td>
+                                    <td class="bg-gray">28.03.2023</td>
+                                    <td class="bg-gray">08.06.2022</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>английский сургут</td>
+                                    <td class="bg-gray">-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>английский в сургуте</td>
+                                    <td class="bg-gray">-</td>
+                                    <td class="bg-green">4</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>курсы английского</td>
+                                    <td class="bg-gray">10</td>
+                                    <td class="bg-green">3</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>курсы английского языка</td>
+                                    <td class="bg-gray">-</td>
+                                    <td class="bg-green">6</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>курсы английского в сургуте</td>
+                                    <td class="bg-gray">-</td>
+                                    <td class="bg-green">7</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>школа английского</td>
+                                    <td class="bg-gray">0</td>
+                                    <td class="bg-green">4</td>
+                                    <td>54</td>
+                                </tr>
+                                <tr>
+                                    <td>школа английского языка сургут</td>
+                                    <td class="bg-gray">-</td>
+                                    <td class="bg-green">4</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>школа английского сургут</td>
+                                    <td class="bg-gray">-</td>
+                                    <td class="bg-green">3</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>школа иностранных языков сургут</td>
+                                    <td class="bg-gray">-</td>
+                                    <td class="bg-green">3</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>английская школа сургут</td>
+                                    <td class="bg-gray">-</td>
+                                    <td class="bg-green">7</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>сургут школа иностранных языков</td>
+                                    <td class="bg-gray">-</td>
+                                    <td class="bg-green">7</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>сургут английская школа</td>
+                                    <td class="bg-gray">-</td>
+                                    <td class="bg-green">7</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>английская школа в сургуте</td>
+                                    <td class="bg-gray">-</td>
+                                    <td class="bg-green">10</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>курсы английского языка сургут</td>
+                                    <td class="bg-gray">-</td>
+                                    <td class="bg-green">8</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h3>Позиции сайта в Яндекс</h3>
+                    <div class="content__table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td class="bg-gray">Запросы</td>
+                                    <td class="bg-gray">Частота</td>
+                                    <td class="bg-gray">28.03.2023</td>
+                                    <td class="bg-gray">08.06.2022</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>английский сургут</td>
+                                    <td class="bg-gray">3</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>английский в сургуте</td>
+                                    <td class="bg-gray">0</td>
+                                    <td class="bg-green">6</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>курсы английского</td>
+                                    <td class="bg-gray">3</td>
+                                    <td class="bg-green">6</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>курсы английского языка</td>
+                                    <td class="bg-gray">17</td>
+                                    <td class="bg-green">3</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>курсы английского в сургуте</td>
+                                    <td class="bg-gray">0</td>
+                                    <td class="bg-green">3</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>школа английского</td>
+                                    <td class="bg-gray">0</td>
+                                    <td class="bg-green">2</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>школа английского языка сургут</td>
+                                    <td class="bg-gray">11</td>
+                                    <td class="bg-green">2</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>школа английского сургут</td>
+                                    <td class="bg-gray">0</td>
+                                    <td class="bg-green">2</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>школа иностранных языков сургут</td>
+                                    <td class="bg-gray">14</td>
+                                    <td class="bg-green">2</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>английская школа сургут</td>
+                                    <td class="bg-gray">9</td>
+                                    <td class="bg-green">2</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>сургут школа иностранных языков</td>
+                                    <td class="bg-gray">14</td>
+                                    <td class="bg-green">2</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>сургут английская школа</td>
+                                    <td class="bg-gray">9</td>
+                                    <td class="bg-green">3</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>английская школа в сургуте</td>
+                                    <td class="bg-gray">0</td>
+                                    <td class="bg-green">2</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>курсы английского языка сургут</td>
+                                    <td class="bg-gray">17</td>
+                                    <td class="bg-green">5</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</article>
 <?php view('lead/case') ?>
 <?php getFooter();

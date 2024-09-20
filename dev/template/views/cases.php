@@ -10,7 +10,7 @@ $cases = [
             'alt' => 'Школа изучения английского языка',
         ],
         'class' => 'case_1',
-        'url' => ''
+        'url' => '/easygoenglish_seo/'
     ],
     [
         'name' => 'Рекламное агентство',
@@ -22,7 +22,7 @@ $cases = [
             'alt' => 'Рекламное агентство',
         ],
         'class' => 'case_2',
-        'url' => ''
+        'url' => '/niko_m_seo/'
     ],
     [
         'name' => 'Строительство каркасных домов',
@@ -72,7 +72,7 @@ $cases = [
 ]
 ?>
 <? if (!empty($cases)): ?>
-    <section class="section <?= $addSectionClass ?? ''?>">
+    <section class="section <?= $addSectionClass ?? '' ?>">
         <div class="container">
             <h2 class="section__title">Наши кейсы</h2>
             <ul class="cases">
