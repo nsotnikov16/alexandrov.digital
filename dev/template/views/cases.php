@@ -93,7 +93,7 @@ $cases = [
                             <div class="case__description">Обсудим ваши задачи, предложим варианты решения</div>
                         </div>
                         <div class="case__bottom">
-                            <button class="btn btn_color">Получить консультацию</button>
+                            <a href="#lead-main" class="btn btn_color">Получить консультацию</a>
                         </div>
                     </div>
                 </li>

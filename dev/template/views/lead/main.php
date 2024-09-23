@@ -1,4 +1,4 @@
-<section class="section lead">
+<section class="section lead" id="lead-main">
     <div class="container">
         <div class="lead__wrapper">
             <div class="lead__left">
