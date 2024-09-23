@@ -5,7 +5,7 @@ addHeadString('<script src="/doma_seo/script.js"></script>');
 ?>
 <?php getHeader(); ?>
 <?php view('hero/case', [
-    'addClass' => 'hero_case_doma',
+    'addClass' => 'hero_75',
     'backgroundColor' => '#5DBB61',
     'title' => 'Увеличили поисковый трафик и сделали сайт лидером в тематике строительства каркасных домов',
     'list' => [

@@ -129,7 +129,7 @@
 }
 
 @media(min-width: 993px) {
-    .hero_case_doma .hero__text-block {
+    .hero_75 .hero__text-block {
         max-width: 75%;
     }
 }
