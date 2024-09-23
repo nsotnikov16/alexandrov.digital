@@ -2,11 +2,15 @@
     display: none !important;
 }
 
+.d-block {
+    display: block !important;
+}
+
 .hidden {
     visibility: hidden;
 }
 
-.m-auto {
+.mx-auto {
     margin: 0 auto;
 }
 

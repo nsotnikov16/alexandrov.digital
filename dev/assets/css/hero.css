@@ -128,6 +128,12 @@
 
 }
 
+@media(min-width: 993px) {
+    .hero_case_doma .hero__text-block {
+        max-width: 75%;
+    }
+}
+
 @media(max-width: 992px) {
     .hero_case .hero__wrapper {
         flex-direction: column;
