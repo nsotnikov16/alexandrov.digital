@@ -12,8 +12,8 @@
                 </nav>
                 <nav class="footer__nav">
                     <a href="/reviews/" class="footer__nav-link">Отзывы</a>
-                    <a href="/advertising/" class="footer__nav-link">Контакты</a>
-                    <a href="/development/" class="footer__nav-link">Политика конфиденциальности</a>
+                    <a href="/contacts/" class="footer__nav-link">Контакты</a>
+                    <a href="/policy/" class="footer__nav-link">Политика конфиденциальности</a>
                 </nav>
             </div>
             <div class="footer__contacts">

@@ -1,59 +1,101 @@
-.contacts__container {
-    display: flex;
-    align-items: center;
+.contacts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
 }
 
-.contacts__list {
-    width: 40%;
+.contacts>* {
+    border-radius: 20px;
+    padding: 60px;
 }
 
-.contacts__map {
-    width: 60%;
-    border-radius: 8px;
-    overflow: hidden;
+.contacts__text {
+    font-family: var(--font-family2);
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 42px;
+    margin: 0 0 20px;
 }
 
-.contacts__map iframe {
-    height: 400px;
+.contacts__phone {
+    font-size: 64px;
+    line-height: 78px;
 }
 
-.contacts__list-item {
+.contacts__svg {
+    max-height: 150px;
+    margin: 0 0 20px;
+}
+
+.contacts__messengers {
+    justify-content: initial;
+}
+
+.contacts__messengers .messengers__item {
+    width: 80px;
+    height: 80px;
+    background: var(--color2);
+}
+
+.contacts__messengers svg {
+    width: 32px;
+    height: 32px;
+    fill: white;
+}
+
+.contacts__requisites-list {
+    display: grid;
+    gap: 20px;
+    padding: 0 0 50px;
+    margin: 40px 0 0;
+}
+
+.contacts__requisites-list>div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 0 0 10px;
+    border-bottom: 1px solid #DADFE7;
+}
+
+.contacts__requisites-list>div:last-child {
+    border-bottom: none;
+}
+
+.contacts__requisites-list span {
     font-size: 18px;
-    margin: 0 0 25px 0;
+    line-height: 26px;
 }
 
-.contacts__list-item:last-child {
-    margin: 0;
+.contacts__requisites-list span:last-child {
+    text-align: right;
 }
 
-.contacts__form {
-    margin-top: 50px;
+.contacts__requisites {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    padding: 60px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-@media(max-width: 992px) {
-    .contacts__container {
-        flex-direction: column-reverse;
-        align-items: baseline;
-    }
+.contacts__office {
+    grid-column: 1/3;
+    grid-row: 3/4;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 30px 40px;
+}
 
-    .contacts__list {
-        margin-top: 25px;
-    }
+.contacts__office-title {
+    font-family: var(--font-family2);
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 78px;
+}
 
-    .contacts__map, .contacts__list {
-        width: 100%;
-    }
-
-    .contacts__list-item {
-        font-size: 14px;
-    }
-
-    .contacts__map iframe {
-        height: 300px;
-    }
-
-    .contacts__list-item > b {
-        display: block;
-        margin-bottom: 5px;
-    }
+.contacts__office .contacts__svg {
+    grid-row: 1/3;
+    width: 100%;
 }

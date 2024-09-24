@@ -52,7 +52,7 @@ $reviews = [
     <section class="section bg-2">
         <div class="container">
             <? if (isset($h1) && $h1): ?>
-                <h1 class="section__title"><span class="color">Отзывы</span> клиентов</h1>
+                <h1 class="page-title"><span class="color">Отзывы</span> клиентов</h1>
             <? else: ?>
                 <h2 class="section__title"><span class="color">Отзывы</span> клиентов</h2>
             <? endif; ?>

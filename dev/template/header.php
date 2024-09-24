@@ -34,7 +34,7 @@
                     <a href="/advertising/" class="header__nav-link <?= checkUrl('/advertising') ? 'link link_active' : '' ?>">Контекстная реклама </a>
                     <a href="/development/" class="header__nav-link <?= checkUrl('/devevelopment') ? 'link link_active' : '' ?>">Разработка сайтов</a>
                     <a href="/reviews/" class="header__nav-link <?= checkUrl('/devevelopment') ? 'link link_active' : '' ?>">Отзывы</a>
-                    <a href="/devevelopment/" class="header__nav-link <?= checkUrl('/devevelopment') ? 'link link_active' : '' ?>">Контакты</a>
+                    <a href="/contacts/" class="header__nav-link <?= checkUrl('/contacts') ? 'link link_active' : '' ?>">Контакты</a>
                 </nav>
                 <div class="header__contacts">
                     <a class="phone" href="<?= getHrefForPhone(PHONE) ?>"><?= PHONE ?></a>
