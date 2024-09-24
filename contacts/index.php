@@ -52,7 +52,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php';
                     </div>
                 </div>
                 <div class="contacts__requisites-bottom">
-                    <a href="#<сюда_ссылку_на_документ_лучше_pdf>" class="btn btn_color w-100">Скачать реквизиты</a>
+                    <a href="#<сюда_ссылку_на_документ_лучше_pdf>" class="btn btn_color w-100" download="">Скачать реквизиты</a>
                 </div>
 
             </div>
