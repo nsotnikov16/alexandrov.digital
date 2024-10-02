@@ -31,11 +31,11 @@ addHeadString('<script src="/doma_seo/script.js"></script>');
                     <div class="content__project">
                         <div>
                             <span>Сайт</span>
-                            <a class="color font-family-2 font-weight" href="https://domain.test" target="_blank">https://domain.test</a>
+                            <a class="color font-family-2 font-weight link" href="https://domain.test" target="_blank">https://domain.test</a>
                         </div>
                         <div>
                             <span>Услуга</span>
-                            <a href="/seo/" class="color font-family-2 font-weight">Seo-продвижение</a>
+                            <a href="/seo/" class="color font-family-2 font-weight link">Seo-продвижение</a>
                         </div>
                     </div>
                 </div>

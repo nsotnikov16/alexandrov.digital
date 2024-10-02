@@ -36,11 +36,11 @@ addHeadString('<script src="/cleaning_context/script.js"></script>');
                     <div class="content__project">
                         <div>
                             <span>Сайт</span>
-                            <a class="color font-family-2 font-weight" href="https://domain.ru" target="_blank">https://domain.ru</a>
+                            <a class="color font-family-2 font-weight link" href="https://domain.ru" target="_blank">https://domain.ru</a>
                         </div>
                         <div>
                             <span>Услуга</span>
-                            <a href="/advertising/" class="color font-family-2 font-weight">Контекстная — реклама</a>
+                            <a href="/advertising/" class="color font-family-2 font-weight link">Контекстная — реклама</a>
                         </div>
                     </div>
                 </div>

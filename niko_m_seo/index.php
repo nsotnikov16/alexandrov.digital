@@ -30,11 +30,11 @@ addHeadString('<script src="/niko_m_seo/script.js"></script>');
                     <div class="content__project">
                         <div>
                             <span>Сайт</span>
-                            <a class="color font-family-2 font-weight" href="https://niko-m.ru" target="_blank">https://niko-m.ru</a>
+                            <a class="color font-family-2 font-weight link" href="https://niko-m.ru" target="_blank">https://niko-m.ru</a>
                         </div>
                         <div>
                             <span>Услуга</span>
-                            <a href="/seo/" class="color font-family-2 font-weight">Seo-продвижение</a>
+                            <a href="/seo/" class="color font-family-2 font-weight link">Seo-продвижение</a>
                         </div>
                     </div>
                 </div>

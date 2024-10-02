@@ -32,11 +32,11 @@ addHeadString('<script src="/easygoenglish_seo/script.js"></script>');
                     <div class="content__project">
                         <div>
                             <span>Сайт</span>
-                            <a class="color font-family-2 font-weight" href="https://easygoenglish.ru" target="_blank">https://easygoenglish.ru</a>
+                            <a class="color font-family-2 font-weight link" href="https://easygoenglish.ru" target="_blank">https://easygoenglish.ru</a>
                         </div>
                         <div>
                             <span>Услуга</span>
-                            <a href="/seo/" class="color font-family-2 font-weight">Seo-продвижение</a>
+                            <a href="/seo/" class="color font-family-2 font-weight link">Seo-продвижение</a>
                         </div>
                     </div>
                 </div>

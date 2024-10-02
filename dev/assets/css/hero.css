@@ -29,6 +29,15 @@
     margin-top: 40px;
 }
 
+.hero__subtitle a {
+    text-decoration: initial;
+    border-bottom: 2px solid var(--color);
+    transition: border 0.2s ease;
+}
+.hero__subtitle a:hover {
+    border-bottom: none;
+}
+
 .hero_inner .hero__wrapper {
     display: flex;
     align-items: center;
