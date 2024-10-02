@@ -12,16 +12,19 @@
                 </div>
             </div>
             <div class="lead__right">
-                <form class="form">
+                <form class="form" data-form-lead>
                     <div class="form__rows">
                         <div class="form__row">
-                            <input name="name" type="text" class="form__field" placeholder="Ваше имя" minlength="2" maxlength="50" required autocomplete="off">
+                            <input name="name" type="text" class="form__field" minlength="2" maxlength="50" required autocomplete="off">
+                            <label>Ваше имя</label>
                         </div>
                         <div class="form__row">
-                            <input name="phone" type="tel" class="form__field" placeholder="Телефон" minlength="18" maxlength="18" required autocomplete="off">
+                            <input name="phone" type="tel" class="form__field tel" minlength="18" maxlength="18" required autocomplete="off" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" title="Формат: +7 (800) 555-35-35">
+                            <label>Телефон</label>
                         </div>
                         <div class="form__row">
-                            <textarea name="question" class="form__field" placeholder="Ваш вопрос" autocomplete="off"></textarea>
+                            <textarea name="question" class="form__field" autocomplete="off"></textarea>
+                            <label>Ваш вопрос</label>
                         </div>
                     </div>
                     <div class="form__agree">

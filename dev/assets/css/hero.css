@@ -93,8 +93,8 @@
     .hero_index .hero__subtitle {
         max-width: 685px;
         position: absolute;
-        bottom: 0;
-        right: 0;
+        bottom: -10px;
+        right: 70px;
     }
 }
 

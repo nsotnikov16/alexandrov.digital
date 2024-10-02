@@ -12,10 +12,23 @@
     margin: 0 0 20px;
 }
 
+.form__rows_flex {
+    display: flex;
+}
+
+.form__rows_flex .form__row {
+    margin: 0 20px 0 0;
+    width: 100%;
+}
+.form__rows_flex .form__row:last-child {
+    margin: 0;
+}
+
 .form__row {
     margin: 0 0 20px;
     display: flex;
     gap: 20px;
+    position: relative;
 }
 
 .form__row:last-child {
@@ -30,6 +43,8 @@
     border: none;
     color: white;
     outline: none;
+    border: 1px solid rgba(255, 255, 255, 0);
+    z-index: 2;
 }
 
 textarea.form__field {
@@ -57,6 +72,7 @@ textarea.form__field {
     position: relative;
     padding: 0 0 0 50px;
     display: block;
+    line-height: 25px;
 }
 
 .form__agree label::before {
@@ -67,8 +83,8 @@ textarea.form__field {
     background-size: 12px 10.5px;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: var(--color2);
-    border: 1px solid var(--color2);
+    background-color: var(--color);
+    border: 2px solid white;
     border-radius: 4px;
     top: -4px;
     left: 0;
@@ -76,6 +92,8 @@ textarea.form__field {
 }
 
 .form__agree input:checked+label::before {
+    background-color: var(--color2);
+    border-color: var(--color2);
     background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTQnIGhlaWdodD0nMTQnIHZpZXdCb3g9JzAgMCAxNCAxNCcgZmlsbD0nbm9uZScgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNMSA3LjQ2MTMxTDUuMTUzODUgMTIuMDc2N0wxMyAxLjkyMjg1JyBzdHJva2U9J3doaXRlJyBzdHJva2Utd2lkdGg9JzInIHN0cm9rZS1saW5lY2FwPSdyb3VuZCcgc3Ryb2tlLWxpbmVqb2luPSdyb3VuZCcvPjwvc3ZnPgo=");
 }
 
@@ -95,12 +113,29 @@ textarea.form__field {
 
 .form__validity:invalid,
 .form__validity:invalid {
-    background: #ffcbcb;
+    border: 1px solid var(--color2);
+    /*  background: #b95959; */
 }
 
-.form__validity:valid,
+/* .form__validity:valid,
 .form__validity:valid {
-    background: #cce8cc;
+    background: #5ec05e;
+} */
+
+.form__row label {
+    position: absolute;
+    top: 21px;
+    left: 20px;
+    cursor: text;
+    transition: top 0.2s linear;
+    color: #7E8792;
+    z-index: 1;
+}
+
+.form__row input:focus+label,
+.form__row textarea:focus+label, .no-empty+label {
+    top: 5px;
+    font-size: 11px;
 }
 
 @media(max-width: 767px) {
@@ -116,5 +151,13 @@ textarea.form__field {
 
     .form__row {
         flex-wrap: wrap;
+    }
+
+    .form__rows_flex {
+        flex-direction: column;
+    }
+
+    .form__rows_flex .form__row {
+        margin: 0 0 20px;
     }
 }

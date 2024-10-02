@@ -139,6 +139,7 @@ window.addEventListener("DOMContentLoaded", function () {
             reg = new RegExp("^" + reg + "$");
             if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
             if (event.type == "blur" && this.value.length < 5) this.value = ""
+            if (!this.value) this.classList.remove('no-empty')
         }
 
         input.addEventListener("input", mask, false);
@@ -218,71 +219,48 @@ async function request(method = 'GET', url, data) {
 }
 
 
-function setFormLogic({ type, loadingText, url, func }) {
+function setFormLogic({ type, loadingText, url }) {
     if (!type) return;
     const form = document.querySelector(`[data-form-${type}]`);
-    if (!form) return
-    const success = document.querySelector(`[data-${type}-success]`);
-    const failed = document.querySelector(`[data-${type}-failed]`);
+    if (!form) return;
+
     const formFields = Array.from(form.querySelectorAll('input:not([type="hidden"]), textarea'));
 
     if (formFields.length) {
         formFields.forEach(item => {
-            item.addEventListener('input', () => item.classList.add('form__validity'));
+            item.addEventListener('input', () => {
+                item.classList.add('form__validity');
+                item.value ? item.classList.add('no-empty') : item.classList.remove('no-empty')
+            });
         })
     }
 
-    if (!success) console.error('Отсутствует блок успешного ответа для ' + type);
-    if (!failed) console.error('Отсутствует блок ошибки для ' + type);
+    const btn = form.querySelector('.form__button');
+    const btnDefaultText = btn.textContent;
 
-    if (form && success && failed) {
-        const btn = form.querySelector('.form__btn');
-        const btnDefaultText = btn.textContent;
-        if (typeof func === 'function') func(form, success, failed, formFields)
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            try {
-                btn.textContent = loadingText ?? 'Отправляем...';
-                failed.classList.add('d-none');
-                const result = await request('POST', url, new FormData(e.target));
-                if (!result.status) throw new Error('');
-                success.classList.remove('d-none');
-                form.reset();
-                Array.from(form.elements).forEach(item => item.classList.remove('form__validity'));
-            } catch (error) {
-                failed.classList.remove('d-none');
-            } finally {
-                arrPopups[`form-${type}-result`].open();
-                btn.textContent = btnDefaultText;
-            }
-        })
-    }
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        try {
+            btn.disabled = true;
+            btn.textContent = loadingText ?? 'Отправляем...';
+            const result = await request('POST', url, new FormData(e.target));
+            if (!result.status) throw new Error('');
+            form.reset();
+            formFields.forEach(item => {
+                item.classList.remove('form__validity');
+                item.classList.remove('no-empty')
+            });
+            window.location.href = '/thanks'
+        } catch (error) {
+            alert('Произошла ошибка при отправке формы! Попробуйте еще раз. Если ошибка повториться снова, сообщите нам!')
+        } finally {
+            btn.textContent = btnDefaultText;
+            btn.disabled = false;
+        }
+    })
 }
 
-setFormLogic({ type: 'project', loadingText: 'Отправляем...', url: '/dev/api/project.php' });
-setFormLogic(
-    {
-        type: 'consultant',
-        loadingText: 'Отправляем...',
-        url: '/dev/api/consultant.php',
-        func: (form, success, failed, formFields) => {
-            const arrRadio = formFields.filter(f => f.name === 'method' && f.value);
-            arrRadio.forEach((item, index) => {
-                item.addEventListener('change', () => {
-                    arrRadio.forEach((itemB, indexB) => {
-                        const needInput = formFields.find(f => f.name == itemB.value);
-                        needInput.required = item.checked;
-                        if (index !== indexB) {
-                            itemB.checked = false;
-                            needInput.required = false;
-                        }
-                        setRequiredLabel(needInput);
-                    })
-                })
-            })
-        }
-    }
-);
+setFormLogic({ type: 'lead', loadingText: 'Отправляем...', url: '/dev/api/lead.php' });
 
 const setRequiredLabel = (input) => {
     const label = input.labels?.[0]

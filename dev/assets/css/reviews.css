@@ -93,6 +93,15 @@
     margin-left: auto;
 }
 
+.review__btn:hover {
+    background: var(--color);
+    color: white;
+}
+
+.review__btn:hover svg {
+    stroke: white;
+}
+
 .review__btn svg {
     width: 10.5px;
     height: 10.5px;
