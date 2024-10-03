@@ -36,10 +36,15 @@
     margin-bottom: 40px;
     font-size: 18px;
     line-height: 24px;
+    transition: all 0.2s ease;
 }
 
 .footer__nav-link:last-child {
     margin-bottom: 0;
+}
+
+.footer__nav-link:hover {
+    color: var(--color3);
 }
 
 .footer__phone {

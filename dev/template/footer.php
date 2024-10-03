@@ -17,7 +17,7 @@
                 </nav>
             </div>
             <div class="footer__contacts">
-                <a href="<?= getHrefForPhone(PHONE) ?>" class="phone footer__phone"><?= PHONE ?></a>
+                <a href="<?= getHrefForPhone(PHONE) ?>" class="phone footer__phone scale"><?= PHONE ?></a>
                 <p>Пишите в мессенджеры</p>
                 <? view('messengers', ['addClass' => 'footer__messengers']) ?>
             </div>

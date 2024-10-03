@@ -8,6 +8,8 @@
     background: #F5F5F5;
     border-radius: 20px;
     height: 100%;
+    transform: translateY(0);
+    transition: all .3s;
 }
 
 .service__wrapper {
@@ -68,6 +70,12 @@
 
 .services_inner .service__button {
     background-color: var(--color2);
+}
+
+@media(min-width: 1025px) {
+    .service:hover {
+        transform: translateY(-10px);
+    }
 }
 
 @media(max-width: 1025px) {

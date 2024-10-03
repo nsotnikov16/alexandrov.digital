@@ -10,13 +10,14 @@
     height: 440px;
     overflow: hidden;
     position: relative;
+    transform: translateY(0);
+    transition: all .3s;
 }
 
 .case__wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     height: 100%;
 }
 
@@ -126,6 +127,11 @@
     right: 57px;
 }
 
+
+.case_consultation {
+    transform: none !important;
+}
+
 .case_consultation .case__name,
 .case_consultation .case__description {
     color: var(--color);
@@ -138,6 +144,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media(min-width: 1351px) {
+    .case:hover {
+        transform: translateY(-10px);
+    }
+
+    .case_2:hover {
+        transform: translateX(-35%) translateY(-10px);
+    }
 }
 
 @media(max-width: 1350px) {
@@ -165,6 +181,8 @@
         width: 150px;
     }
 }
+
+
 
 @media(max-width: 1025px) {
     .case__name {

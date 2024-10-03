@@ -13,6 +13,7 @@
     align-items: center;
     justify-content: center;
     margin-right: 12px;
+    transition: all 0.2s ease;
 }
 
 .messengers__item:last-child {
@@ -23,4 +24,12 @@
     width: 15px;
     height: 15px;
     flex-shrink: 0;
+}
+
+.messengers__item:hover {
+    background-color: var(--color2) !important;
+}
+
+.messengers__item:hover svg{
+    fill: white;
 }
