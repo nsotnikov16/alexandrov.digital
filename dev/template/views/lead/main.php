@@ -2,7 +2,7 @@
     <div class="container">
         <div class="lead__wrapper">
             <div class="lead__left">
-                <h2 class="section__title">Давайте начнем работать прямо сейчас</h2>
+                <h2 class="section__title pulse-text">Давайте начнем работать прямо сейчас</h2>
                 <div class="lead__man">
                     <img class="lead__man-photo" src="<?= ASSETS_PATH ?>images/photo.webp" alt="Дмитрий, ваш интернет-маркетолог" />
                     <div class="lead__man-info">

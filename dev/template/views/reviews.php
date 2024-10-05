@@ -58,7 +58,7 @@ $reviews = [
             <? endif; ?>
             <ul class="reviews">
                 <? foreach ($reviews as $key => $review): ?>
-                    <li class="review">
+                    <li class="review cursor-effect">
                         <div class="review__top">
                             <div class="review__author">
                                 <img class="review__author-photo" src="<?= $review['author']['photo'] ?>" alt="Отзыв <?= $review['author']['name'] ?>" />

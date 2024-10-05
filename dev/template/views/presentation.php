@@ -4,8 +4,8 @@
             <div class="presentation__left">
                 <h2 class="section__title presentation__title"><span class="color">Помогаем продвигать</span> бизнес в Сургуте<br> уже 10 лет</h2>
                 <div class="presentation__media">
-                    <video class="presentation__media-video"  width="100%" poster="<?= ASSETS_PATH ?>images/poster.webp">
-                        <source src="">
+                    <video class="presentation__media-video"  width="100%" poster="<?= ASSETS_PATH ?>images/poster.webp" onclick="videoHandler(this)">
+                        <source src="<?= ASSETS_PATH?>video/niko.mp4" type="video/mp4">
                     </video>
                     <p class="presentation__media-text">Видео презентация, за 3 минут</p>
                 </div>

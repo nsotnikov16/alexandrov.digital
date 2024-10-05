@@ -1,7 +1,7 @@
 <section class="section lead lead_case">
     <div class="container">
         <div class="lead__wrapper">
-            <h2 class="section__title lead__title">Хотите также или лучше?</h2>
+            <h2 class="section__title lead__title pulse-text">Хотите также или лучше?</h2>
             <div class="lead__left">
                 <form class="form" data-form-lead>
                     <p class="form__text">Оставляйте заявку, и мы вместе подумаем

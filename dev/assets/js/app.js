@@ -1,4 +1,6 @@
 if (typeof AOS !== 'undefined') {
+    const sectionContainers = document.querySelectorAll('section .container')
+    if (sectionContainers) sectionContainers.forEach(item => item.setAttribute('data-aos', 'fade-up'))
     AOS.init();
 }
 
@@ -380,4 +382,109 @@ function handleScrollOnce(element, callback) {
 
     window.addEventListener('scroll', checkVisibility);
     checkVisibility();
+}
+
+// Функция для анимации счетчика, которая изменяет только числа
+function animateCounter(counterElement) {
+    const targetText = counterElement.getAttribute('data-target');
+    const targetNumber = parseFloat(targetText.match(/-?\d+\.?\d*/)); // Извлекаем числовую часть
+    const suffix = targetText.replace(/-?\d+\.?\d*/, ''); // Извлекаем текстовую часть (например, %, + и т.д.)
+
+    const increment = targetNumber / 70; // Настройка скорости анимации
+    let currentValue = 0;
+
+    // Функция обновления числа
+    function updateCounter() {
+        currentValue += increment;
+
+        if ((increment > 0 && currentValue < targetNumber) || (increment < 0 && currentValue > targetNumber)) {
+            counterElement.innerText = `${Math.ceil(currentValue)}${suffix}`;
+            requestAnimationFrame(updateCounter);
+        } else {
+            counterElement.innerText = `${targetNumber}${suffix}`; // Устанавливаем конечное значение с текстом
+        }
+    }
+
+    updateCounter();
+}
+
+const counters = document.querySelectorAll('.counter');
+if (counters.length) counters.forEach(counter => animateCounter(counter));
+
+// Функция для создания эффекта перетасовки текста
+function shuffleTextEffect(element, targetWord) {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+{}:"<>?|[];,./~'; // Набор случайных символов
+    let iterations = 0;
+    const intervalSpeed = 50; // Скорость смены символов
+
+    const interval = setInterval(() => {
+        const text = targetWord.split('').map((letter, index) => {
+            if (index < iterations) {
+                return letter; // Когда доходим до нужной буквы, оставляем её
+            }
+            return characters[Math.floor(Math.random() * characters.length)]; // Показ случайного символа
+        }).join('');
+
+        element.innerText = text;
+
+        if (iterations >= targetWord.length) {
+            clearInterval(interval); // Останавливаем анимацию, когда все буквы правильные
+        }
+
+        iterations += 1 / 3; // Количество итераций для постепенной замены символов (можно настроить)
+    }, intervalSpeed);
+}
+
+// Применение эффекта на элемент
+const shuffleTextElement = document.querySelector('.shuffle-text');
+if (shuffleTextElement) {
+    const targetWord = shuffleTextElement.getAttribute('data-word');
+    shuffleTextEffect(shuffleTextElement, targetWord);
+}
+
+
+const cursorEffectElements = document.querySelectorAll('.cursor-effect');
+if (cursorEffectElements.length) {
+    document.body.insertAdjacentHTML('beforeend', `<div class="cursor-dot"></div><div class="cursor-highlight"></div>`);
+    // Элементы для точки и подсветки
+    const cursorDot = document.querySelector('.cursor-dot');
+    const cursorHighlight = document.querySelector('.cursor-highlight');
+
+    // Обновляем позицию точки и подсветки при движении мыши
+    document.addEventListener('mousemove', function (e) {
+        if (e.target.closest('.cursor-effect')) {
+            cursorDot.classList.remove('d-none');
+            cursorHighlight.classList.remove('d-none');
+            cursorDot.style.top = e.clientY + 'px';
+            cursorDot.style.left = e.clientX + 'px';
+            cursorHighlight.style.top = e.clientY + 'px';
+            cursorHighlight.style.left = e.clientX + 'px';
+        } else {
+            cursorDot.classList.add('d-none');
+            cursorHighlight.classList.add('d-none');
+        }
+    });
+
+    cursorEffectElements.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            cursorHighlight.style.width = '150px';
+            cursorHighlight.style.height = '150px';
+        });
+
+        item.addEventListener('mouseleave', () => {
+            cursorHighlight.style.width = '100px';
+            cursorHighlight.style.height = '100px';
+        });
+    })
+}
+
+
+function videoHandler(video) {
+    if (video.paused) {
+        video.setAttribute('controls', '');
+        setTimeout(() => video.play(), 500)
+    } else {
+        video.pause();
+        video.removeAttribute('controls');
+    }
 }

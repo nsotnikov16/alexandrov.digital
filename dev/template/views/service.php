@@ -17,7 +17,7 @@
                 <p class="service__deadline"><?= $deadline ?></p>
             <? endif; ?>
             <? if (isset($button) && !empty($button)): ?>
-                <button <?= isset($button['url']) ? ('onclick="location = ' . $button['url'] . '"') : '' ?> href="<?= $button['url'] ?? 'javscript:void(0)' ?>" class="service__button btn" <?= $button['attributes'] ?? '' ?>><?= $button['text'] ?></button>
+                <button <?= isset($button['url']) ? ('onclick="location = ' . $button['url'] . '"') : 'onclick="document.querySelector(`#lead-main`).scrollIntoView()"' ?> class="service__button btn" <?= $button['attributes'] ?? '' ?>><?= $button['text'] ?></button>
             <? endif ?>
         </div>
     </a>

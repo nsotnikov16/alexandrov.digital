@@ -17,7 +17,7 @@
                     <? foreach ($list as $item): ?>
                         <li class="hero__item">
                             <? if (isset($item['number']) && $item['number']): ?>
-                                <p class="hero__item-number color"><?= $item['number'] ?></p>
+                                <p class="hero__item-number color counter" data-target="<?= $item['number'] ?>">0</p>
                             <? endif; ?>
                             <? if (isset($item['text']) && $item['text']): ?>
                                 <p class="hero__item-text"><?= $item['text'] ?></p>

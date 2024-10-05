@@ -161,8 +161,11 @@ html {
     background: currentColor;
 }
 
-.link:hover::after/* ,
-.link_active::after */ {
+.link:hover::after
+
+/* ,
+.link_active::after */
+    {
     transform-origin: left;
     transform: scaleX(1);
 }
@@ -173,10 +176,55 @@ html {
 }
 
 
-.link_active::before, .link_active::after {
+.link_active::before,
+.link_active::after {
     content: initial;
 }
 
+.pulse-text {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.cursor-effect {
+    position: relative;
+}
+
+.cursor-effect:hover {
+    cursor: none;
+}
+
+/* Кастомный курсор-точка */
+.cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 3px;
+    background-color: red;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    /* Поверх всех элементов */
+}
+
+/* Подсвеченная область с градиентом и эффектом размытия */
+.cursor-highlight {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(255, 120, 0, 0.5) 0%, rgba(255, 120, 0, 0) 80%);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    /* За точкой */
+    transition: transform 0.1s ease, background 0.2s ease, filter 0.2s ease;
+    filter: blur(20px);
+    /* Размытие для создания мягких краев */
+}
 
 @media (max-width: 767px) {
     hr {
@@ -192,14 +240,16 @@ html {
     }
 }
 
-@keyframes matrix-animation {
-    0% {
-        opacity: 0;
-        transform: translateY(-50%);
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        /* Исходное состояние */
     }
 
-    100% {
-        opacity: 1;
-        transform: translateY(1400%);
+    50% {
+        transform: scale(1.02);
+        /* Увеличение текста */
     }
 }

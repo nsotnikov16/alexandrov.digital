@@ -12,6 +12,7 @@
     border-radius: 20px;
     border: 1px solid var(--color);
     min-height: 400px;
+    position: relative;
 }
 
 .work__name {
@@ -41,6 +42,14 @@
     transform: scale(0.5);
     transition: transform 0.1s linear; /* Плавное обновление scale */
     border: none;
+}
+
+.work__gif {
+    width: 60px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    filter: sepia(1) hue-rotate(300deg) saturate(100);
 }
 
 .work__wrapper {}
