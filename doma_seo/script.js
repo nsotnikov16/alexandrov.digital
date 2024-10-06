@@ -18,7 +18,7 @@ const data1 = {
         borderColor: '#4285f4',
         borderWidth: 2,
         fill: true,
-        pointRadius: 0,
+        pointRadius: 4,
         pointBackgroundColor: 'rgba(54, 162, 235, 1)',
         tension: 0.4  // Плавная закругленная линия
     }]
@@ -44,7 +44,21 @@ document.addEventListener('DOMContentLoaded', () => {
         new Chart(chart1.getContext('2d'), {
             type: 'line',
             data: data1,
+            plugins: [ChartDataLabels],
             options: {
+                plugins: {
+                    datalabels: {
+                        align: 'top',
+                        anchor: 'end',
+                        color: '#000',
+                        font: {
+                            weight: 'bold'
+                        },
+                        formatter: function(value) {
+                            return value;
+                        }
+                    }
+                },
                 maintainAspectRatio: false,
                 scales: {
                     y: {
@@ -74,7 +88,21 @@ document.addEventListener('DOMContentLoaded', () => {
         new Chart(chart2.getContext('2d'), {
             type: 'bar',
             data: data2,
+            plugins: [ChartDataLabels],
             options: {
+                plugins: {
+                    datalabels: {
+                        align: 'top',
+                        anchor: 'end',
+                        color: '#000',
+                        font: {
+                            weight: 'bold'
+                        },
+                        formatter: function(value) {
+                            return value;
+                        }
+                    }
+                },
                 maintainAspectRatio: false,
                 scales: {
                     y: {

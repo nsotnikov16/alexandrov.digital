@@ -1,6 +1,7 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php';
 addHeadString('<script src="' . ASSETS_PATH . 'js/chart.js"></script>');
+addHeadString('<script src="' . ASSETS_PATH . 'js/chartjs-plugin-datalabels.js"></script>');
 addHeadString('<script src="/niko_m_seo/script.js"></script>');
 ?>
 <?php getHeader(); ?>

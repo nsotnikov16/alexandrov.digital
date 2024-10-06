@@ -21,7 +21,21 @@ document.addEventListener('DOMContentLoaded', () => {
         new Chart(chart1.getContext('2d'), {
             type: 'bar',
             data: data1,
+            plugins: [ChartDataLabels],
             options: {
+                plugins: {
+                    datalabels: {
+                        align: 'top',
+                        anchor: 'end',
+                        color: '#000',
+                        font: {
+                            weight: 'bold'
+                        },
+                        formatter: function(value) {
+                            return value;
+                        }
+                    }
+                },
                 maintainAspectRatio: false,
                 scales: {
                     y: {
