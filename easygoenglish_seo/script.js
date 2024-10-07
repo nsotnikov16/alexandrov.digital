@@ -91,6 +91,30 @@ document.addEventListener('DOMContentLoaded', () => {
                         formatter: function(value) {
                             return value;
                         }
+                    },
+                    annotation: {
+                        annotations: {
+                            label1: {
+                                type: 'label',
+                                xValue: 2,
+                                yValue: 60,
+                                backgroundColor: '#F25A2C',
+                                color: 'white',
+                                content: ['СТАРТ'],
+                                font: {
+                                  size: 18
+                                }
+                            },
+                            line1: {
+                                type: 'line',
+                                xMin: 2,
+                                yMin: 0,
+                                xMax: 2,
+                                yMax: 60,
+                                borderColor: '#F25A2C',
+                                
+                            }
+                        }
                     }
                 },
                 maintainAspectRatio: false, 
@@ -126,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
             },
-            plugins: [ChartDataLabels]
+            plugins: [ChartDataLabels, window['chartjs-plugin-annotation']]
         });
     })
 

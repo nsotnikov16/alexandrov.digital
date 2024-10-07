@@ -2,8 +2,7 @@
 $breadcrumbs = ['/denta_vinta_context/' => 'Кейс стоматология'];
 $breadcrumbs_background = '#2DB7F6';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php';
-addHeadString('<script src="' . ASSETS_PATH . 'js/chart.js"></script>');
-addHeadString('<script src="' . ASSETS_PATH . 'js/chartjs-plugin-datalabels.js"></script>');
+addChartJS();
 addHeadString('<script src="/denta_vinta_context/script.js"></script>');
 ?>
 <?php getHeader(); ?>

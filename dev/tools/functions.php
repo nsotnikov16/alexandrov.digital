@@ -40,7 +40,8 @@ function getFirstURLSegment(): string
     return '';
 }
 
-function getHrefForPhone($phone) {
+function getHrefForPhone($phone)
+{
     $replace = preg_replace('/[^0-9]+/', '', $phone);
     if ($replace[0] === '8') $replace[0] = '7';
     if ($replace[0] === '7') $replace = '+' . $replace;
@@ -53,9 +54,17 @@ function addHeadString(string $string)
     $GLOBALS['additionalStringsHead'][] = $string;
 }
 
-function showHeadStrings() {
+function showHeadStrings()
+{
     if (!isset($GLOBALS['additionalStringsHead']) || empty($GLOBALS['additionalStringsHead'])) return;
     foreach ($GLOBALS['additionalStringsHead'] as $string) {
         echo $string . PHP_EOL;
     }
+}
+
+function addChartJS()
+{
+    addHeadString('<script src="' . ASSETS_PATH . 'js/chart.js"></script>');
+    addHeadString('<script src="' . ASSETS_PATH . 'js/chartjs-plugin-datalabels.js"></script>');
+    addHeadString('<script src="' . ASSETS_PATH . 'js/chartjs-plugin-annotation.js"></script>');
 }

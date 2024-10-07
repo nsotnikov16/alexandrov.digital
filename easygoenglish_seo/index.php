@@ -2,8 +2,7 @@
 $breadcrumbs = ['/easygoenglish_seo/' => 'Кейс Школа английского языка'];
 $breadcrumbs_background = '#EB4961';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php';
-addHeadString('<script src="' . ASSETS_PATH . 'js/chart.js"></script>');
-addHeadString('<script src="' . ASSETS_PATH . 'js/chartjs-plugin-datalabels.js"></script>');
+addChartJS();
 addHeadString('<script src="/easygoenglish_seo/script.js"></script>');
 ?>
 <?php getHeader(); ?>
