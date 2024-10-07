@@ -1,5 +1,5 @@
 .breadcrumbs {
-    margin: 10px 0 0;
+    padding: 30px 0 10px;
 }
 
 .breadcrumbs__list {
@@ -8,13 +8,40 @@
 }
 
 .breadcrumbs__item {
-    margin-right: 15px;
+    margin-right: 38px;
+    font-size: var(--font-family2);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs__item_white .breadcrumbs__link {
+    color: white;
 }
 
 .breadcrumbs__item::after {
-    content: '/';
+    content: '';
     position: relative;
-    left: 5px;
+    left: 19px;
+    top: 1px;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nNicgaGVpZ2h0PSc4JyB2aWV3Qm94PScwIDAgNiA4JyBmaWxsPSdub25lJyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnPjxwYXRoIGQ9J002IDRMLTMuMjYyNjZlLTA3IDcuNDY0MUwtMi4zNDI0OWUtMDggMC41MzU4OThMNiA0WicgZmlsbD0nIzEzMTMxMycvPjwvc3ZnPgo=");
+    width: 8px;
+    height: 8px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: 8px 8px;
+}
+
+.breadcrumbs__item_white::after {
+    filter: brightness(0) invert(1);
+}
+
+.breadcrumbs__item:nth-last-child(2)::after {
+    opacity: 0.2;
+}
+
+.breadcrumbs__item_white:nth-last-child(2)::after {
+    opacity: 1;
 }
 
 .breadcrumbs__item:last-child::after {
@@ -22,8 +49,8 @@
 }
 
 .breadcrumbs__item:last-child {
-    font-weight: 600;
     margin-right: 0;
+    opacity: 0.7;
 }
 
 .breadcrumbs__link {}

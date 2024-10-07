@@ -56,5 +56,4 @@
 </header>
 
 <main>
-    <? // require_once(__DIR__ . '/views/breadcrumbs.php') 
-    ?>
+    <? view('breadcrumbs'); ?>

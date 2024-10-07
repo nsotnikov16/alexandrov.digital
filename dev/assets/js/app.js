@@ -436,10 +436,12 @@ function shuffleTextEffect(element, targetWord) {
 }
 
 // Применение эффекта на элемент
-const shuffleTextElement = document.querySelector('.shuffle-text');
-if (shuffleTextElement) {
-    const targetWord = shuffleTextElement.getAttribute('data-word');
-    shuffleTextEffect(shuffleTextElement, targetWord);
+const shuffleTextElements = document.querySelectorAll('.shuffle-text');
+if (shuffleTextElements.length) {
+    shuffleTextElements.forEach(shuffleTextElement => {
+        const targetWord = shuffleTextElement.getAttribute('data-word');
+        shuffleTextEffect(shuffleTextElement, targetWord);
+    })
 }
 
 

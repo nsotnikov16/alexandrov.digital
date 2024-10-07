@@ -13,18 +13,18 @@
           "item":
           {
            "@id": "' . CURRENT_URL . '",
-           "name": "ITRinity"
+           "name": "Alexandrov.Digital"
            }
          },
     ' ?>
-    <div class="breadcrumbs">
+    <div class="breadcrumbs" <?= isset($GLOBALS['breadcrumbs_background']) ? ('style="background-color: ' . $GLOBALS['breadcrumbs_background'] . ';"') : '' ?>>
         <div class="container">
             <ul class="breadcrumbs__list">
-                <li class="breadcrumbs__item">
-                    <a href="/" class="breadcrumbs__link not-effect">ITRinity</a>
+                <li class="breadcrumbs__item <?= isset($GLOBALS['breadcrumbs_background']) ? 'breadcrumbs__item_white' : '' ?>">
+                    <a href="/" class="breadcrumbs__link not-effect">Главная</a>
                 </li>
                 <? foreach ($GLOBALS['breadcrumbs'] as $link => $title) : ?>
-                    <li class="breadcrumbs__item">
+                    <li class="breadcrumbs__item <?= isset($GLOBALS['breadcrumbs_background']) ? 'breadcrumbs__item_white' : '' ?>">
                         <? if ($cnt === count($GLOBALS['breadcrumbs'])) : ?>
                             <span class="breadcrumbs__link"><?= $title ?></span>
                         <? else : ?>

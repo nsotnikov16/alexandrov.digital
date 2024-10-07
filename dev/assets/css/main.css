@@ -37,6 +37,7 @@ main {
     line-height: 78px;
     font-weight: 700;
     font-size: 64px;
+    word-break: break-word;
 }
 
 .logo {

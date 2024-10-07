@@ -1,4 +1,6 @@
 <?php
+$breadcrumbs = ['/niko_m_seo/' => 'Кейс СПА салоны'];
+$breadcrumbs_background = '#F25A2C';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php';
 addHeadString('<script src="' . ASSETS_PATH . 'js/chart.js"></script>');
 addHeadString('<script src="' . ASSETS_PATH . 'js/chartjs-plugin-datalabels.js"></script>');
