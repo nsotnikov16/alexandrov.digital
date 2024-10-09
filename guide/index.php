@@ -1,5 +1,6 @@
 <?php
 http_response_code(404);
+if (!isset($_GET['DmitryAlexandov']) || $_GET['DmitryAlexandov'] != 1) die; 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/dev/tools/core.php';
 ?>
 <?php getHeader(); ?>
