@@ -44,7 +44,7 @@ const data2 = {
     ],
     datasets: [{
         label: 'Показатель',
-        data: [140, 100, 130, 146, 340, 380, 380, 420, 440, 400, 460, 470, 460, 456, 470, 475, 480, 485],
+        data: [130, 100, 115, 150, 320, 380, 390, 430, 450, 399, 470, 477, 480, 473, 500, 511, 525, 540],
         backgroundColor: '#c6dafc',
         borderColor: '#4285f4',
         borderWidth: 2,
@@ -62,18 +62,39 @@ document.addEventListener('DOMContentLoaded', () => {
         new Chart(chart1.getContext('2d'), {
             type: 'line',
             data: data1,
-            plugins: [ChartDataLabels],
+            plugins: [ChartDataLabels, window['chartjs-plugin-annotation']],
             options: {
                 plugins: {
                     datalabels: {
                         align: 'top',
                         anchor: 'end',
                         color: '#000',
-                        font: {
-                            weight: 'bold'
-                        },
                         formatter: function(value) {
                             return value;
+                        }
+                    },
+                    annotation: {
+                        annotations: {
+                            label1: {
+                                type: 'label',
+                                xValue: 2,
+                                yValue: 170,
+                                backgroundColor: '#F25A2C',
+                                color: 'white',
+                                content: ['СТАРТ'],
+                                font: {
+                                    size: 14
+                                }
+                            },
+                            line1: {
+                                type: 'line',
+                                xMin: 2,
+                                yMin: 0,
+                                xMax: 2,
+                                yMax: 170,
+                                borderColor: '#F25A2C',
+
+                            }
                         }
                     }
                 },
@@ -106,18 +127,39 @@ document.addEventListener('DOMContentLoaded', () => {
         new Chart(chart2.getContext('2d'), {
             type: 'line',
             data: data2,
-            plugins: [ChartDataLabels],
+            plugins: [ChartDataLabels, window['chartjs-plugin-annotation']],
             options: {
                 plugins: {
                     datalabels: {
                         align: 'top',
                         anchor: 'end',
                         color: '#000',
-                        font: {
-                            weight: 'bold'
-                        },
                         formatter: function(value) {
                             return value;
+                        }
+                    }, 
+                    annotation: {
+                        annotations: {
+                            label1: {
+                                type: 'label',
+                                xValue: 2,
+                                yValue: 220,
+                                backgroundColor: '#F25A2C',
+                                color: 'white',
+                                content: ['СТАРТ'],
+                                font: {
+                                    size: 14
+                                }
+                            },
+                            line1: {
+                                type: 'line',
+                                xMin: 2,
+                                yMin: 0,
+                                xMax: 2,
+                                yMax: 220,
+                                borderColor: '#F25A2C',
+
+                            }
                         }
                     }
                 },

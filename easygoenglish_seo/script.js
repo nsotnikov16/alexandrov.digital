@@ -61,7 +61,7 @@ const data3 = {
     ],
     datasets: [{
         label: 'Показатель',
-        data: [5, 6, 4, 30, 40, 50, 80, 135, 148, 140, 135, 150, 165],
+        data: [5, 7, 6, 25, 40, 55, 110, 150, 140, 135, 120, 160, 168],
         backgroundColor: '#c6dafc',
         borderColor: '#4285f4',
         borderWidth: 2,
@@ -85,10 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         align: 'top',
                         anchor: 'end',
                         color: '#000',
-                        font: {
-                            weight: 'bold'
-                        },
-                        formatter: function(value) {
+                        formatter: function (value) {
                             return value;
                         }
                     },
@@ -102,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 color: 'white',
                                 content: ['СТАРТ'],
                                 font: {
-                                  size: 18
+                                    size: 14
                                 }
                             },
                             line1: {
@@ -112,12 +109,12 @@ document.addEventListener('DOMContentLoaded', () => {
                                 xMax: 2,
                                 yMax: 60,
                                 borderColor: '#F25A2C',
-                                
+
                             }
                         }
                     }
                 },
-                maintainAspectRatio: false, 
+                maintainAspectRatio: false,
                 scales: {
                     y: {
                         ticks: {
@@ -160,18 +157,39 @@ document.addEventListener('DOMContentLoaded', () => {
         new Chart(chart2.getContext('2d'), {
             type: 'line',
             data: data2,
-            plugins: [ChartDataLabels],
+            plugins: [ChartDataLabels, window['chartjs-plugin-annotation']],
             options: {
                 plugins: {
                     datalabels: {
                         align: 'top',
                         anchor: 'end',
                         color: '#000',
-                        font: {
-                            weight: 'bold'
-                        },
-                        formatter: function(value) {
+                        formatter: function (value) {
                             return value;
+                        }
+                    },
+                    annotation: {
+                        annotations: {
+                            label1: {
+                                type: 'label',
+                                xValue: 2,
+                                yValue: 40,
+                                backgroundColor: '#F25A2C',
+                                color: 'white',
+                                content: ['СТАРТ'],
+                                font: {
+                                    size: 14
+                                }
+                            },
+                            line1: {
+                                type: 'line',
+                                xMin: 2,
+                                yMin: 0,
+                                xMax: 2,
+                                yMax: 40,
+                                borderColor: '#F25A2C',
+
+                            }
                         }
                     }
                 },
@@ -204,22 +222,43 @@ document.addEventListener('DOMContentLoaded', () => {
         new Chart(chart3.getContext('2d'), {
             type: 'line',
             data: data3,
-            plugins: [ChartDataLabels],
+            plugins: [ChartDataLabels, window['chartjs-plugin-annotation']],
             options: {
                 plugins: {
                     datalabels: {
                         align: 'top',
                         anchor: 'end',
                         color: '#000',
-                        font: {
-                            weight: 'bold'
-                        },
-                        formatter: function(value) {
+                        formatter: function (value) {
                             return value;
+                        }
+                    },
+                    annotation: {
+                        annotations: {
+                            label1: {
+                                type: 'label',
+                                xValue: 2,
+                                yValue: 40,
+                                backgroundColor: '#F25A2C',
+                                color: 'white',
+                                content: ['СТАРТ'],
+                                font: {
+                                    size: 14
+                                }
+                            },
+                            line1: {
+                                type: 'line',
+                                xMin: 2,
+                                yMin: 0,
+                                xMax: 2,
+                                yMax: 40,
+                                borderColor: '#F25A2C',
+
+                            }
                         }
                     }
                 },
-                maintainAspectRatio: false, 
+                maintainAspectRatio: false,
                 scales: {
                     y: {
                         beginAtZero: true,

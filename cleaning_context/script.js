@@ -4,7 +4,7 @@ const data1 = {
     labels: ['Было', 'Стало'],
     datasets: [{
         label: 'Цена',
-        data: [8000, 4200],  // Укажи свои данные здесь
+        data: [8200, 4100],  // Укажи свои данные здесь
         backgroundColor: '#4285f4',
         borderColor: 'rgba(54, 162, 235, 1)',
         borderWidth: 1,
@@ -28,9 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         align: 'top',
                         anchor: 'end',
                         color: '#000',
-                        font: {
-                            weight: 'bold'
-                        },
                         formatter: function(value) {
                             return value;
                         }

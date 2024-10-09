@@ -13,7 +13,7 @@ const data1 = {
     ],
     datasets: [{
         label: 'Показатель',
-        data: [90, 95, 92, 98, 110, 170, 240, 285, 360],
+        data: [78, 85, 82, 95, 120, 180, 250, 300, 370],
         backgroundColor: '#c6dafc',
         borderColor: '#4285f4',
         borderWidth: 2,
@@ -28,7 +28,7 @@ const data2 = {
     labels: ['Было', 'Стало'],
     datasets: [{
         label: 'Цена',
-        data: [6500, 4500],  // Укажи свои данные здесь
+        data: [6700, 4400],  // Укажи свои данные здесь
         backgroundColor: '#4285f4',
         borderColor: 'rgba(54, 162, 235, 1)',
         borderWidth: 1,
@@ -51,11 +51,32 @@ document.addEventListener('DOMContentLoaded', () => {
                         align: 'top',
                         anchor: 'end',
                         color: '#000',
-                        font: {
-                            weight: 'bold'
-                        },
                         formatter: function(value) {
                             return value;
+                        }
+                    },
+                    annotation: {
+                        annotations: {
+                            label1: {
+                                type: 'label',
+                                xValue: 2,
+                                yValue: 130,
+                                backgroundColor: '#F25A2C',
+                                color: 'white',
+                                content: ['СТАРТ'],
+                                font: {
+                                    size: 14
+                                }
+                            },
+                            line1: {
+                                type: 'line',
+                                xMin: 2,
+                                yMin: 0,
+                                xMax: 2,
+                                yMax: 130,
+                                borderColor: '#F25A2C',
+
+                            }
                         }
                     }
                 },
@@ -95,9 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         align: 'top',
                         anchor: 'end',
                         color: '#000',
-                        font: {
-                            weight: 'bold'
-                        },
                         formatter: function(value) {
                             return value;
                         }
