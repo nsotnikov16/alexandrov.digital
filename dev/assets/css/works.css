@@ -40,16 +40,17 @@
     line-height: 48px;
     color: #FFFFFF;
     transform: scale(0.5);
-    transition: transform 0.1s linear; /* Плавное обновление scale */
+    transition: transform 0.1s linear;
+    /* Плавное обновление scale */
     border: none;
 }
 
-.work__gif {
-    width: 60px;
+.work__lottie {
+    width: 45px;
+    height: 45px;
     position: absolute;
     top: 20px;
     right: 20px;
-    filter: sepia(1) hue-rotate(300deg) saturate(100);
 }
 
 .work__wrapper {}

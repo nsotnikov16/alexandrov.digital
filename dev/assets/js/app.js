@@ -490,3 +490,32 @@ function videoHandler(video) {
         video.removeAttribute('controls');
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof lottie === 'undefined') return;
+    const animateImages = document.querySelectorAll('.lottie')
+    if (animateImages.length > 0) {
+        animateImages.forEach((item, ind) => {
+            const parent = item.closest('[data-lottie-parent]')
+            parent.id = "i" + ind
+            const animation = lottie.loadAnimation({
+                container: item,
+                render: 'svg',
+                loop: true,
+                autoplay: false,
+                path: `/dev/assets/lottie/${item.dataset.lottie}.json`,
+                name: item.dataset.lottie
+            })
+
+            if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+                animation.play();
+                setTimeout(() => animation.stop(), 2000)
+                parent.addEventListener('touchstart', () => animation.play())
+                parent.addEventListener('touchend', () => animation.pause())
+            } else {
+                parent.addEventListener('mouseenter', () => animation.play())
+                parent.addEventListener('mouseleave', () => animation.pause())
+            }
+        })
+    }
+})

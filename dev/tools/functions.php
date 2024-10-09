@@ -68,3 +68,7 @@ function addChartJS()
     addHeadString('<script src="' . ASSETS_PATH . 'js/chartjs-plugin-datalabels.js"></script>');
     addHeadString('<script src="' . ASSETS_PATH . 'js/chartjs-plugin-annotation.js"></script>');
 }
+
+function addLottieJS() {
+    addHeadString('<script src="' . ASSETS_PATH . 'js/lottie.js"></script>');
+}
