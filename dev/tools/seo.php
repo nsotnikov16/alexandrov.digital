@@ -1,4 +1,6 @@
 <?
+const SEO_TITLE_DEFAULT = 'Alexandrov.Digital';
+const SEO_DESCRIPTION_DEFAULT = 'Alexandrov.Digital';
 
 $GLOBALS['SEO_CITIES'] = [
     'surgut' => [
@@ -63,15 +65,16 @@ function getCitySEO()
     return [];
 }
 
-function getCanonical() {
+function getCanonical()
+{
     return CURRENT_URL . preg_replace("/\?.*/", "", $_SERVER["REQUEST_URI"]);
 }
 
 if (!isset($GLOBALS['SEO_TITLE'])) {
     $citySEO = getCitySEO();
-    $GLOBALS['SEO_TITLE'] = 'Alexandrov.Digital';
+    $GLOBALS['SEO_TITLE'] = SEO_TITLE_DEFAULT;
 }
 
 if (!isset($GLOBALS['SEO_DESCRIPTION'])) {
-    $GLOBALS['SEO_DESCRIPTION'] = 'Alexandrov.Digital';
+    $GLOBALS['SEO_DESCRIPTION'] = SEO_DESCRIPTION_DEFAULT;
 }
